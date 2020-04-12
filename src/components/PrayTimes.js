@@ -3,13 +3,16 @@ import {useFetch} from './useFetch'
 import HijriDate from './HijriDate'
 import PrayCard from './PrayCard'
 import {useLoaction} from './useLocation';
+import { useCurrentDate } from './useCurrentDate';
 
 export default function PrayTimes() {
 
     // Get Local coords
     const [latitude, longitude] = useLoaction();
+    const date = useCurrentDate();
+
     // Get Data
-    const [loaded, data] = useFetch(`http://api.aladhan.com/v1/timings/12-4-2020?latitude=${latitude}&longitude=${longitude}&method=5`);
+    const [loaded, data] = useFetch(`http://api.aladhan.com/v1/timings/${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}?latitude=${latitude}&longitude=${longitude}&method=5`);
 
     // Get Hijri Date
     const hijri = loaded && data.date.hijri;
@@ -17,7 +20,6 @@ export default function PrayTimes() {
     // Get Pray Time
     const timings = loaded && data.timings;
     const prayNames =  Object.keys(timings);
-    console.log(prayNames);
     const prayTimes =  Object.values(timings);
     const prayTimeList = prayNames.map((p, i) =>  (<PrayCard  key={p} name={p} time={prayTimes[i]}/>))
 
