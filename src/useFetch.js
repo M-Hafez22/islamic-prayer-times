@@ -1,10 +1,15 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 
 
 export const useFetch = (url) => {
+    const [fetcheddata, setFetchedData] = useState({});
+
     useEffect(() => {
        fetch(url)
         .then(response => response.json())
-        .then(data => console.log(data))
-    }, [url])
+        .then(data => setFetchedData(data.data))
+    }, [url]);
+
+    return  fetcheddata;
+
 }
