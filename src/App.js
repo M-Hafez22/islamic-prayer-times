@@ -1,6 +1,6 @@
 import React from 'react';
-import Clock from './Clock'
-import PrayTimes from './PrayTimes'
+import Clock from './components/Clock'
+import PrayTimes from './components/PrayTimes'
 import './App.css';
 
 function App() {
