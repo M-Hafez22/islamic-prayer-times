@@ -1,11 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { useCurrentDate } from './hooks/useCurrentDate'
 
 export default function Clock() {
-    
+    // Get the current time
     const date = useCurrentDate();
-    
+    // Add zero to numbers under 10
     const addZero = (n) => (n < 10 ? `0${n}` : n);
+    // Determine night or day 
     const dayOrNight = date.getHours() < 12 ? "صباحًا" : "مساءً";
 
     return (
