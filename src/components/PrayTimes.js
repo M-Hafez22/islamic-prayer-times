@@ -1,9 +1,9 @@
 import React from 'react'
-import {useFetch} from './useFetch'
+import {useFetch} from './hooks/useFetch'
 import HijriDate from './HijriDate'
 import PrayCard from './PrayCard'
-import {useLoaction} from './useLocation';
-import { useCurrentDate } from './useCurrentDate';
+import {useLoaction} from './hooks/useLocation';
+import { useCurrentDate } from './hooks/useCurrentDate';
 
 export default function PrayTimes() {
 

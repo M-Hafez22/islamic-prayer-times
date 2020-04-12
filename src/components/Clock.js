@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useCurrentDate } from './useCurrentDate'
+import { useCurrentDate } from './hooks/useCurrentDate'
 
 export default function Clock() {
     
