@@ -6,8 +6,7 @@ export default function Clock() {
 
     useEffect(() => {
             setInterval(setDate(new Date()), 1000);
-        }
-    )
+        },[])
 
     const addZero = (n) => (n < 10 ? `0${n}` : n);
 
