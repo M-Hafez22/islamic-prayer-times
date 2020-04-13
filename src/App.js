@@ -10,9 +10,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Clock />
+      
       <FetchedDataProvider>
         <LanguageProvider>
+          <Clock />
           <HijriDate /> 
           <PrayTimes />
           <Footer />
