@@ -16,7 +16,7 @@ function PrayTimes() {
 
     return (
         <div>
-            <h1>أوقات الصلاة</h1>
+            <h1>Prayer Timings</h1>
 
             { loaded &&   prayTimeList }
         </div>

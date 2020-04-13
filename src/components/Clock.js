@@ -7,7 +7,7 @@ export default function Clock() {
     // Add zero to numbers under 10
     const addZero = (n) => (n < 10 ? `0${n}` : n);
     // Determine night or day 
-    const dayOrNight = date.getHours() < 12 ? "صباحًا" : "مساءً";
+    const dayOrNight = date.getHours() < 12 ? "AM" : "PM";
 
     return (
         <div>
