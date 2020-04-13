@@ -1,15 +1,14 @@
 
 .clock{
-    margin: auto;
+    margin: 1em auto;
     h2{
         font-size: 5em;
         font-weight: 400;
         display: inline;
     }
     span{
-        font-size: 2em;
+        font-size: 2rem;
         font-weight: 400;
-        padding: .5em;
-        
+        padding: .1em;
     }
 }

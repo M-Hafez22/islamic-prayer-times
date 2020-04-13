@@ -3,8 +3,13 @@ button{
     font-size: 2em;
     border: solid $clr 2px;
     margin: 1em;
-    padding: .25em;
+    padding: 0.5em;
     border-radius: 20px;
     color: $clr;
     cursor: pointer;
+}
+
+.active {
+    color: $active-clr;
+    border-color: $active-clr;
 }

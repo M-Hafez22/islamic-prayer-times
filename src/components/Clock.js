@@ -19,9 +19,9 @@ export default function Clock() {
     return (
         <div className='clock'>
             <h2> 
-                {addZero(date.getHours())}:
-                {addZero(date.getMinutes())}:
-                {addZero(date.getSeconds())}
+                {addZero(date.getHours())}
+                :{addZero(date.getMinutes())}
+                <span>:{addZero(date.getSeconds())}</span>
             </h2>
                 <span>{language === "en" ? dayOrNight.en : dayOrNight.ar}</span>
         </div>
