@@ -5,12 +5,11 @@ import PrayTimes from './components/PrayTimes'
 import Footer from './components/Footer'
 import {FetchedDataProvider} from './components/contexts/FetchedDataContext'
 import {LanguageProvider} from './components/contexts/languageContext'
-import './App.css';
+import './components/styles/main.scss'
 
 function App() {
   return (
     <div className="App">
-      
       <FetchedDataProvider>
         <LanguageProvider>
           <Clock />
