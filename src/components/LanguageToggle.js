@@ -4,9 +4,9 @@ import {LanguageContext} from './contexts/languageContext'
 export default function LanguageToggle() {
     const [language, setLanguage] = useContext(LanguageContext);
     const toggle = (e) => {
-        e.currentTarget.textContent == "english" ? 
-        setLanguage('en') : 
-        setLanguage('ar')
+        e.currentTarget.textContent === "english" ? 
+            setLanguage('en') : 
+            setLanguage('ar')
     }
     return (
         <div>
