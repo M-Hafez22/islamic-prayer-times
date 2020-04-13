@@ -1,7 +1,7 @@
 import React, {useState, createContext}from "react";
-import {useFetch} from './hooks/useFetch'
-import {useLoaction} from './hooks/useLocation';
-import { useCurrentDate } from './hooks/useCurrentDate';
+import {useFetch} from '../hooks/useFetch'
+import {useLoaction} from '../hooks/useLocation';
+import { useCurrentDate } from '../hooks/useCurrentDate';
 
 export const FetchedDataContext = createContext();
 

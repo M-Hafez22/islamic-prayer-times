@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {FetchedDataContext} from './FetchedDataContext'
+import {FetchedDataContext} from './contexts/FetchedDataContext'
 
 export default function HijriDate() {
 

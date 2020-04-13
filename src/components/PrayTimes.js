@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import PrayCard from './PrayCard'
-import {FetchedDataContext} from './FetchedDataContext'
+import {FetchedDataContext} from './contexts/FetchedDataContext'
 
 function PrayTimes() {
     console.log("rendring...")
