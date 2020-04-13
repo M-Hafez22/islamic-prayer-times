@@ -1,13 +1,18 @@
 import React from 'react';
 import Clock from './components/Clock'
+import HijriDate from './components/HijriDate'
 import PrayTimes from './components/PrayTimes'
+import {FetchedDataProvider} from './components/FetchedDataContext'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Clock />
-      <PrayTimes />
+      <FetchedDataProvider>
+        <HijriDate /> 
+        <PrayTimes />
+      </FetchedDataProvider>
     </div>
   );
 }

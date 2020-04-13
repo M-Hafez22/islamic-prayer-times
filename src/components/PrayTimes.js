@@ -1,22 +1,11 @@
-import React from 'react'
-import HijriDate from './HijriDate'
+import React, {useContext} from 'react'
 import PrayCard from './PrayCard'
-import {useFetch} from './hooks/useFetch'
-import {useLoaction} from './hooks/useLocation';
-import { useCurrentDate } from './hooks/useCurrentDate';
+import {FetchedDataContext} from './FetchedDataContext'
 
-export default function PrayTimes() {
+function PrayTimes() {
+    console.log("rendring...")
 
-    // Get Local coords
-    const [latitude, longitude] = useLoaction();
-    // Get the current time
-    const date = useCurrentDate();
-    // Get Data
-    const [loaded, data] = useFetch(`http://api.aladhan.com/v1/timings/${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}?latitude=${latitude}&longitude=${longitude}&method=5`);
-
-    // Get Hijri Date
-    const hijri = loaded && data.date.hijri;
-
+    const [loaded, data] = useContext(FetchedDataContext);
     // Get Pray Time
     const timings = loaded && data.timings;
     const prayNames =  Object.keys(timings);
@@ -28,8 +17,10 @@ export default function PrayTimes() {
     return (
         <div>
             <h1>أوقات الصلاة</h1>
-            { loaded &&  <HijriDate hijri={hijri}/> }
+
             { loaded &&   prayTimeList }
         </div>
     )
 }
+
+export default PrayTimes;
