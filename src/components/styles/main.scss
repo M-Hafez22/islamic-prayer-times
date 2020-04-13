@@ -2,13 +2,25 @@
 @import 'clock';
 @import 'date';
 @import 'prayTime';
+@import 'buttons';
+
+/*
+body
+App
+*/
 
 
 body{
     height: 100vh;
     width: 100vw;
-    padding: 1em;
-    text-align: center;
-    color : $clr;
+    overflow: hidden;
 }
 
+.App{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color : $clr;
+    font-size: 12px;
+}
