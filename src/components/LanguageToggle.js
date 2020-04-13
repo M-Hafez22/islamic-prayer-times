@@ -12,9 +12,9 @@ export default function LanguageToggle() {
     return (
         <div>
             <button onClick={(e) => toggle(e)}
-                className={language === "en" && 'active'}>english</button>
+                className={language === "en" ? 'active' : ''}>english</button>
             <button onClick={(e) => toggle(e)}
-                className={language === "ar" && 'active'}>عربى</button>
+                className={language === "ar" ? 'active' : ''}>عربى</button>
         </div>
     )
 }
