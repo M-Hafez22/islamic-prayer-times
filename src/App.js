@@ -3,6 +3,7 @@ import Clock from './components/Clock'
 import HijriDate from './components/HijriDate'
 import PrayTimes from './components/PrayTimes'
 import {FetchedDataProvider} from './components/contexts/FetchedDataContext'
+import {LanguageProvider} from './components/contexts/languageContext'
 import './App.css';
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
     <div className="App">
       <Clock />
       <FetchedDataProvider>
-        <HijriDate /> 
-        <PrayTimes />
+        <LanguageProvider>
+          <HijriDate /> 
+          <PrayTimes />
+        </LanguageProvider>
       </FetchedDataProvider>
     </div>
   );
