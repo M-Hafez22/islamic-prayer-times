@@ -18,10 +18,9 @@ function PrayTimes() {
     ))
 
     return (
-        <div>
+        <div className="prayTime">
             <h1>{language === "en" ? "Prayer Timings" : "أوقات الصلاة"}</h1>
-
-            { loaded &&   prayTimeList }
+            <ul>{ loaded &&   prayTimeList }</ul>
         </div>
     )
 }

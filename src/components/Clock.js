@@ -17,13 +17,13 @@ export default function Clock() {
     };
         
     return (
-        <div>
+        <div className='clock'>
             <h2> 
                 {addZero(date.getHours())}:
                 {addZero(date.getMinutes())}:
                 {addZero(date.getSeconds())}
             </h2>
-                <h2>{language === "en" ? dayOrNight.en : dayOrNight.ar}</h2>
+                <span>{language === "en" ? dayOrNight.en : dayOrNight.ar}</span>
         </div>
     )
 }
