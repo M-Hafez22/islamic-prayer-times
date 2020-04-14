@@ -21,13 +21,14 @@ function PrayTimes() {
     const prayNames =  Object.keys(timings);
     const prayTimes =  Object.values(timings);
     const  [remaineTime, nextPray] = useNextPrayer(prayTimes);
+    console.log(nextPray)
     const prayTimeList = prayNames.map((p, i) =>  ( <PrayCard active={i === nextPray ? "active" : ""} key={p} name={p} time={prayTimes[i]}/> ))
     
     return (
         <div className="prayTime">
             <h1>{language === "en" ? "Prayer Timings" : "أوقات الصلاة"}</h1>
             <ul>{ loaded &&   prayTimeList }</ul>
-    <h2>nextPray: {remaineTime}</h2>
+            <h2>Next prayer : {remaineTime}</h2>
         </div>
     )
 }

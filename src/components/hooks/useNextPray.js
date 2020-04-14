@@ -22,7 +22,7 @@ export default function useNextPrayer(arr) {
     // Get the remaining time for the next prayer
     let remaineTime = leftPray.length > 0 ? ( Math.max(...leftPray)) : (86400000 - (date- prayDate[0]))
     // Get next Prayer index
-    const nextPrayer = timeLeft.indexOf(remaineTime)
+    const nextPrayer = timeLeft.indexOf(remaineTime) !== -1 ? timeLeft.indexOf(remaineTime) : 0
 
     return [getTimeFormat(remaineTime), nextPrayer]
   }
