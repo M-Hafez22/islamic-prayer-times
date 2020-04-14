@@ -16,6 +16,11 @@
             padding: 0.25em;
             width: 6.5em;
         }
+
+        .active {
+            color: $active-clr;
+            border-color: $active-clr;
+        }
     }
 
 
