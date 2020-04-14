@@ -28,7 +28,7 @@ function PrayTimes() {
         <div className="prayTime">
             <h1>{language === "en" ? "Prayer Timings" : "أوقات الصلاة"}</h1>
             <ul>{ loaded &&   prayTimeList }</ul>
-            <h2>Next prayer : {remaineTime}</h2>
+            <h2>Remaining time to {prayNames[nextPray]} {loaded && remaineTime}</h2>
         </div>
     )
 }

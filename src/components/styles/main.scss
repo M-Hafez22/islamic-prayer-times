@@ -2,28 +2,26 @@
 @import 'clock';
 @import 'date';
 @import 'prayTime';
-@import 'buttons';
+@import 'footer';
 
 /*
 body
 App
 */
 
-
-body{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .App{
-    margin: auto;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     text-align: center;
     color : $clr;
     font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
