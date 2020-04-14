@@ -12,13 +12,16 @@ function PrayTimes() {
     const [loaded, data] = useContext(FetchedDataContext);
     // Get Pray Time
     const timings = loaded && data.timings;
-    const prayers = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+
+    // Remove additional data
+    const additional = ['Sunrise', 'Imsak','Midnight', 'Sunset'];
+    additional.forEach(i => delete timings[i]);
+
+    
     const prayNames =  Object.keys(timings);
     const prayTimes =  Object.values(timings);
-    const prayTimeList = prayNames.map((p, i) =>  (
-        prayers.includes(p) && <PrayCard key={p} name={p} time={prayTimes[i]}/>
-    ))
     const  nextPray = useNextPrayer(prayTimes);
+    const prayTimeList = prayNames.map((p, i) =>  ( <PrayCard key={p} name={p} time={prayTimes[i]}/> ))
     
     return (
         <div className="prayTime">
