@@ -12,6 +12,7 @@ export const useFetch = (url) => {
         .then(response => response.json())
         .then(data => {
             setFetchedData(data.data)
+            console.log(data.data)
             setLoaded(true)
         })
     }, [url]);

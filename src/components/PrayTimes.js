@@ -1,15 +1,17 @@
 import React, {useContext} from 'react'
 import PrayCard from './PrayCard'
+import RemainTime from './RemainTime'
 import {FetchedDataContext} from './contexts/FetchedDataContext'
 import {LanguageContext} from './contexts/languageContext'
 import useNextPrayer from './hooks/useNextPray'
 
 
 function PrayTimes() {
-    console.log("rendring...")
+
+    // Contexts 
     const [language] = useContext(LanguageContext);
-    
     const [loaded, data] = useContext(FetchedDataContext);
+
     // Get Pray Time
     const timings = loaded && data.timings;
 
@@ -17,20 +19,35 @@ function PrayTimes() {
     const additional = ['Sunrise', 'Imsak','Midnight', 'Sunset'];
     additional.forEach(i => delete timings[i]);
 
+    // Get Prayer Names
+    const prayer_en =  Object.keys(timings);
+    const prayer_ar = [ 'الفجر', 'الظهر','العصر','المغرب', 'العشاء'];
+    const prayerNames = language === "en" ? prayer_en : prayer_ar;
     
-    const prayNames =  Object.keys(timings);
+    // Get Prayer Times 
     const prayTimes =  Object.values(timings);
     const  [remaineTime, nextPray] = useNextPrayer(prayTimes);
-    console.log(nextPray)
-    const prayTimeList = prayNames.map((p, i) =>  ( <PrayCard active={i === nextPray ? "active" : ""} key={p} name={p} time={prayTimes[i]}/> ))
-    
+
+    // Prayer Card 
+    const prayerTimeList = prayerNames.map((p, i) =>  ( 
+        <PrayCard 
+            key={p}
+            active={i === nextPray ? "active" : ""}  
+            name={p} 
+            time={prayTimes[i]}
+        /> 
+    ))
+
+    // Remain time content
+    const text = language === "en" ? 'Remaining time to' : 'الوقت المتبقى على صلاة ' ;
+    const prayer = prayerNames[nextPray];
+
     return (
         <div className="prayTime">
-            <h1>{language === "en" ? "Prayer Timings" : "أوقات الصلاة"}</h1>
-            <ul>{ loaded &&   prayTimeList }</ul>
-            <h2>Remaining time to {prayNames[nextPray]} {loaded && remaineTime}</h2>
+            <h1>{language === "en" ? "Prayer Time" : "أوقات الصلاة"}</h1>
+            <ul>{ loaded &&   prayerTimeList }</ul>
+            <RemainTime text={text}  prayer={prayer} time={loaded && remaineTime}/>
         </div>
     )
 }
-
 export default PrayTimes;
