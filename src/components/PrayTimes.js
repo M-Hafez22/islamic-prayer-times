@@ -12,7 +12,7 @@ function PrayTimes() {
     const [language] = useContext(LanguageContext);
     const [loaded, data] = useContext(FetchedDataContext);
 
-    // Get Pray Time
+    // Get Prayer Time
     const timings = loaded && data.timings;
 
     // Remove additional data
@@ -38,14 +38,18 @@ function PrayTimes() {
         /> 
     ))
 
-    // Remain time content
-    const text = language === "en" ? 'Remaining time to' : 'الوقت المتبقى على صلاة ' ;
-    const prayer = prayerNames[nextPray];
+    let text =  'Remaining time to';
+    let prayer = prayerNames[nextPray];
+
+    // Convert content to Arabic 
+    if (language === "ar") {
+        text = 'يتبقى على رفع أذان ';
+        prayerTimeList.reverse() ;
+    }
 
     return (
         <div className="prayTime">
-            <h1>{language === "en" ? "Prayer Time" : "أوقات الصلاة"}</h1>
-            <ul>{ loaded &&   prayerTimeList }</ul>
+            <ul>{ loaded &&  prayerTimeList }</ul>
             <RemainTime text={text}  prayer={prayer} time={loaded && remaineTime}/>
         </div>
     )
