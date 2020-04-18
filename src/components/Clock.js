@@ -4,7 +4,7 @@ import {LanguageContext} from './contexts/languageContext'
 
 export default function Clock() {
 
-    const [language, setLanguage] = useContext(LanguageContext);
+    const [language] = useContext(LanguageContext);
 
     // Get the current time
     const date = useCurrentDate();
@@ -23,7 +23,7 @@ export default function Clock() {
                 :{addZero(date.getMinutes())}
                 <span>:{addZero(date.getSeconds())}</span>
             </h2>
-                <span>{language === "en" ? dayOrNight.en : dayOrNight.ar}</span>
+            <span>{language === "en" ? dayOrNight.en : dayOrNight.ar}</span>
         </div>
     )
 }
