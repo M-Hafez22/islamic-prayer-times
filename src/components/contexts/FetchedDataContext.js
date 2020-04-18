@@ -8,13 +8,10 @@ export function FetchedDataProvider(props) {
     
     // Get Local coords
     const [latitude, longitude] = useLoaction();
-    // Get the current time
-
+    // Get time
     const date = Math.floor(Date.now() / 1000);
     // Get Data
-    const [loaded, data] = useFetch(`http://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=5`);
-
-
+    const [loaded, data] = useFetch(`http://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=5&adjustment=1`);
 
     return(
     <FetchedDataContext.Provider value={[loaded, data]}>
