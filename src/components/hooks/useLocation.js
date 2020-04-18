@@ -2,8 +2,8 @@ import {useState} from 'react'
 
 export const  useLoaction = () =>  {
 
-    const [latitude, setLatitude] = useState("55.924600499999997");
-    const [longitude, setLongitude] = useState("35.851709500000005");
+    const [latitude, setLatitude] = useState("30.008");
+    const [longitude, setLongitude] = useState("31.2194");
 
     // get current location 
     const  success = (position) => {
@@ -11,7 +11,7 @@ export const  useLoaction = () =>  {
         setLongitude(position.coords.longitude);
     }
     
-    const  error = () => {console.log('Unable to retrieve your location');}
+    const  error = (position) => {console.log(position.message);}
     
     !navigator.geolocation ?
         console.log('Geolocation is not supported by your browser') :
