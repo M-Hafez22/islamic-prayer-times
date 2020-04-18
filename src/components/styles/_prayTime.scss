@@ -1,5 +1,8 @@
 .prayTime{
-    margin: 1em auto;
+
+    h1, h2{
+        padding : 0.5em;
+    }
     ul{
         margin:auto;
         display: flex;
@@ -7,8 +10,8 @@
         align-items: center;
         flex-wrap: wrap;
         list-style: none;
-        padding: 0;
-
+        padding: 1em;
+        
         li {
             border: solid $clr 2px;
             border-radius: 20px;
@@ -16,12 +19,15 @@
             padding: 0.25em;
             width: 6.5em;
         }
-
-        .active {
-            color: $active-clr;
-            border-color: $active-clr;
-        }
+        
     }
-
-
+    .active {
+        color: $active-clr;
+        border-color: $active-clr;
+    }
+    .remainTime {
+        color: $active-clr;
+        font-size: 2em;
+        font-weight: 500;
+    }
 }
