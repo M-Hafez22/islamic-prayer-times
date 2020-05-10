@@ -1,8 +1,8 @@
-@import 'config';
-@import 'clock';
-@import 'date';
-@import 'prayTime';
-@import 'footer';
+@import "config";
+@import "clock";
+@import "date";
+@import "prayTime";
+@import "footer";
 
 /*
 body
@@ -10,18 +10,32 @@ App
 */
 
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.App{
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    color : $clr;
-    font-size: 12px;
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  color: $clr;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 700px) {
+  .App {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .App {
+    font-size: 16px;
+  }
 }
