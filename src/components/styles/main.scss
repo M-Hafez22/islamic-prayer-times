@@ -21,11 +21,12 @@ App
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   text-align: center;
   color: $clr;
   font-size: 12px;
+  margin: 1em;
 }
 
 @media only screen and (min-width: 700px) {

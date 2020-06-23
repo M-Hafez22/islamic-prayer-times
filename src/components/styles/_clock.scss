@@ -1,14 +1,13 @@
+.clock {
 
-.clock{
-    padding: 0 1em ;
-    h2{
-        font-size: 5em;
-        font-weight: 600;
-        display: inline;
-    }
-    span{
-        font-size: 1.5rem;
-        font-weight: 400;
-        padding: .1em;
-    }
+  h2 {
+    font-size: 8em;
+    font-weight: 600;
+    display: inline;
+  }
+  span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.1em;
+  }
 }
