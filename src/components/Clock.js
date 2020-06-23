@@ -23,7 +23,7 @@ export default function Clock() {
               {to12Format(currentTime)}
               <span>:{addZero(date.getSeconds())}</span>
             </h2>
-            <span>{language === "en" ? dayOrNight.en : dayOrNight.ar}</span>
+            <span>{dayOrNight[language]}</span>
         </div>
     )
 }
