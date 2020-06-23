@@ -19,6 +19,3 @@ export function FetchedDataProvider(props) {
         </FetchedDataContext.Provider>
     )
 }
-
-
-

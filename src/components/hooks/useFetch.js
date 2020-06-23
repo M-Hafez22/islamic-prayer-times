@@ -7,12 +7,11 @@ export const useFetch = (url) => {
     const [Loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        
+        console.log('Fetching....')
        fetch(url)
         .then(response => response.json())
         .then(data => {
             setFetchedData(data.data)
-            console.log(data.data)
             setLoaded(true)
         })
     }, [url]);
