@@ -2,8 +2,6 @@
     width: 100vw;
 
     button{
-      position:relative ;
-      overflow: hidden;
       font-size: 1.5em;
       text-transform: capitalize;
       border: solid $clr 2px;
@@ -13,6 +11,20 @@
       color: $clr;
       cursor: pointer;
       min-width: 5em;
+    }
+
+    .active {
+        color: $active-clr;
+        border-color: $active-clr;
+    }
+}
+
+// Apply hover effect to non-touch screens only
+@media (hover: hover), (pointer: fine){
+  .footer{
+    button{
+      position:relative ;
+      overflow: hidden;
 
       &:hover::after{
         transform: scaleX(1);
@@ -33,10 +45,6 @@
         transform-origin:right;
         transition:  transform 1s ease;
       }
-
     }
-    .active {
-        color: $active-clr;
-        border-color: $active-clr;
-    }
+  }
 }
