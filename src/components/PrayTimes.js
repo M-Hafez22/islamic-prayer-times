@@ -32,25 +32,25 @@ function PrayTimes() {
     // Prayer Card
     const prayerTimeList = prayerNames.map((p, i) =>  (
         <PrayCard
-            key={p}
-            active={i === nextPray ? "active" : ""}
-            name={p}
-            time={to12Format(prayTimes[i])}
+          key={p}
+          active={i === nextPray ? "active" : ""}
+          name={p}
+          time={to12Format(prayTimes[i])}
         />
     ))
 
-    let text =  'Remaining time to';
+    // Remain Time message
+    const text = language === "ar"
+      ? 'يتبقى على رفع أذان '
+      :'Remaining time to';
     let prayer = prayerNames[nextPray];
-
-    // Convert content to Arabic
-    if (language === "ar") {
-        text = 'يتبقى على رفع أذان ';
-        prayerTimeList.reverse() ;
-    }
 
     return (
         <div className="prayTime">
-            <ul>{ loaded &&  prayerTimeList }</ul>
+            <ul
+              style={{flexDirection: language === "ar" && " row-reverse"}}>
+              { loaded &&  prayerTimeList }
+            </ul>
             <RemainTime text={text}  prayer={prayer} time={loaded && remaineTime}/>
         </div>
     )
