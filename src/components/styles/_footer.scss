@@ -14,8 +14,7 @@
     }
 
     .active {
-        color: $active-clr;
-        border-color: $active-clr;
+      @include active;
     }
 }
 

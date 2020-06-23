@@ -1,2 +1,9 @@
 $clr: #444;
-$active-clr: #209c15;
+$active-clr: #1cc00e;
+$ctive-clr-text: darken($active-clr, 20);
+
+@mixin active {
+    color: $ctive-clr-text;
+    border-color: $active-clr;
+    font-weight: bolder;
+}

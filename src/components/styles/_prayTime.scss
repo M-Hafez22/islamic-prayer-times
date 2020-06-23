@@ -11,7 +11,7 @@
         flex-wrap: wrap;
         list-style: none;
         padding: 1em;
-        
+
         li {
             border: solid $clr 2px;
             border-radius: 20px;
@@ -19,14 +19,13 @@
             padding: 0.25em;
             width: 6.5em;
         }
-        
+
     }
     .active {
-        color: $active-clr;
-        border-color: $active-clr;
+      @include active;
     }
     .remainTime {
-        color: $active-clr;
+        color: $ctive-clr-text;
         font-size: 2em;
         font-weight: 500;
     }
