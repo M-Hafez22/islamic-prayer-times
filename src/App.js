@@ -5,7 +5,7 @@ import PrayTimes from './components/PrayTimes'
 import Footer from './components/Footer'
 import {FetchedDataProvider} from './components/contexts/FetchedDataContext'
 import {LanguageProvider} from './components/contexts/languageContext'
-import './components/styles/main.scss'
+import './styles/main.scss'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <FetchedDataProvider>
         <LanguageProvider>
           <Clock />
-          <HijriDate /> 
+          <HijriDate />
           <PrayTimes />
           <Footer />
         </LanguageProvider>

@@ -27,6 +27,14 @@ App
   font-size: 11px;
 }
 
+
+@media only screen and (min-width: 360px) {
+  .App {
+    font-size: 12px;
+  }
+}
+
+
 @media only screen and (min-width: 700px) {
   .App {
     font-size: 14px;
