@@ -18,14 +18,19 @@ export default function Clock() {
     };
 
     return (
-        <div className='clock'>
-            <h2>
-              {to12Format(currentTime)}
-              <span>
-                :{addZero(date.getSeconds())}
-              </span>
-            </h2>
-            <span>{dayOrNight[language]}</span>
+        <div
+          className='clock'
+          style={{flexDirection: language === "ar" && " row-reverse"}}>
+
+          <h2>
+            {to12Format(currentTime)}
+            <span>
+              :{addZero(date.getSeconds())}
+            </span>
+          </h2>
+          
+          <span>{dayOrNight[language]}</span>
+
         </div>
     )
 }
