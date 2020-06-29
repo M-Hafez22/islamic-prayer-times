@@ -1,6 +1,6 @@
 
 import { useCurrentDate } from './useCurrentDate'
-import {addZero} from '../helper/formatTime'
+import {getTimeFormat} from '../helper/formatTime'
 
 export default function useNextPrayer(arr) {
     // Get current time
@@ -8,25 +8,18 @@ export default function useNextPrayer(arr) {
     // Get the date of the prayer
     const getTime = time => new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.substring(0, 2), time.substring(3, 5), 0, 0);
     const prayDate = arr.map(p => getTime(p))
-    
+
     // Get the remaining time for each prayer
     const timeLeft = prayDate.map(p => p =(date - p))
-   // time format
-    function getTimeFormat (num) {
-      num = Math.ceil(Math.abs(num) / 1000)
-      const h = Math.floor(num / 3600);
-      num  %= 3600;
-      const m = Math.floor(num / 60);
-      const s =  num % 60;
-      return (`${addZero(h)}:${addZero(m)}:${addZero(s)}`)
-    }
+
     // Get the remaining prayers for today
-    const leftPray = timeLeft.filter(el => el < 0)
+    const remainingPrayers = timeLeft.filter(el => el < 0)
 
     // Get the remaining time for the next prayer
-    let remaineTime = leftPray.length > 0
-      ? ( Math.max(...leftPray))
-      : (86400000 - (date- prayDate[0]))
+    const millisecondsInDay = 86400000;
+    let remaineTime = remainingPrayers.length > 0
+      ? ( Math.max(...remainingPrayers))
+      : (millisecondsInDay - (date - prayDate[0]))
 
     // Get next Prayer index
     const nextPrayer = timeLeft.indexOf(remaineTime) !== -1
