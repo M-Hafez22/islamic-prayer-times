@@ -21,7 +21,9 @@ export default function Clock() {
         <div className='clock'>
             <h2>
               {to12Format(currentTime)}
-              <span>:{addZero(date.getSeconds())}</span>
+              <span>
+                :{addZero(date.getSeconds())}
+              </span>
             </h2>
             <span>{dayOrNight[language]}</span>
         </div>

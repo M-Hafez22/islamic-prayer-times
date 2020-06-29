@@ -16,7 +16,6 @@ function PrayTimes() {
     // Get Prayer Time
     const timings = loaded && data.timings;
 
-
     // Remove additional data
     const additional = ['Sunrise', 'Imsak','Midnight', 'Sunset'];
     additional.forEach(i => delete timings[i]);
@@ -34,7 +33,7 @@ function PrayTimes() {
     const prayerTimeList = prayerNames.map((p, i) =>  (
         <PrayCard
           key={p}
-          active={i === nextPray ? "active" : ""}
+          active={i === nextPray && "active"}
           name={p}
           time={to12Format(prayTimes[i])}
         />

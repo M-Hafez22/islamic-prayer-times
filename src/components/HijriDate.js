@@ -13,9 +13,11 @@ export default function HijriDate() {
 
     return loaded &&(
         <div className="date">
-            {language === "en" ? 
-                <h2>{gregorian.weekday.en} {hijri.day} {hijri.month.en} {hijri.year}</h2> :
-                <h2>{hijri.weekday.ar} {hijri.day} {hijri.month.ar} {hijri.year}</h2>}
+            {
+              language === "en"
+                ? <h2>{gregorian.weekday.en} {hijri.day} {hijri.month.en} {hijri.year}</h2>
+                : <h2>{hijri.weekday.ar} {hijri.day} {hijri.month.ar} {hijri.year}</h2>
+            }
         </div>
     )
 }
