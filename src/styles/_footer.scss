@@ -27,7 +27,7 @@
 
       &:hover::after{
         transform: scaleX(1);
-        transform-origin:left;
+        transform-origin:bottom;
         z-index: 5;
       }
 
@@ -41,8 +41,8 @@
         background:currentColor;
         opacity: 0.25;
         transform: scaleX(0);
-        transform-origin:right;
-        transition:  transform 1s ease;
+        transform-origin:top;
+        transition:  transform 350ms ease;
       }
     }
   }
