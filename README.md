@@ -5,6 +5,12 @@
 ---
  **Version 1.0.0**
 ---
+## Table of Contents
+- [Features](#features)
+- [Upcoming Features](#upcoming-features)
+- [Manual](#manual)
+- [License](#license)
+---
 
 ## Features
 	1. Current time ( in 12 formats)
