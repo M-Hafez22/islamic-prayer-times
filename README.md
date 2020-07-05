@@ -13,7 +13,7 @@
 	4. Remaining time for the next prayer
 
 ---
-##Upcoming Features
+## Upcoming Features
   - Changing Location manually
   - Add more languages
 
