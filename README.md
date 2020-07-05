@@ -11,7 +11,12 @@
 	2. Hijri Date
 	3. The prayers times for one day
 	4. Remaining time for the next prayer
-	
+
+---
+##Upcoming Features
+  - Changing Location manually
+  - Add more languages
+
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
