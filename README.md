@@ -6,6 +6,13 @@
  **Version 1.0.0**
 ---
 
+## Features
+	1. Current time ( in 12 formats)
+	2. Hijri Date
+	3. The prayers times for one day
+	4. Remaining time for the next prayer
+	
+
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
