@@ -10,6 +10,7 @@
 - [Upcoming Features](#upcoming-features)
 - [Manual](#manual)
 - [License](#license)
+- [Technologies](#technologies)
 ---
 
 ## Features
@@ -33,6 +34,12 @@
 	 - let the app to detect your location to present prayers times for your location
 	 -  If you block location detecting it will present data for the default location ( Africa/Cairo ).
 	 - The time zone will be displayed at the bottom of the app
+---
+
+## Technologies
+  - React
+  - React hooks
+  - Sass
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
