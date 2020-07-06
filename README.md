@@ -1,6 +1,6 @@
 # Islamic Prayer Times
 
-> A website provides You with **Prayer Times**  for one day depending on your time zone
+A website provides The user with **Hijri Date** and **Prayer Times** depending on your time zone.
 
 ---
  **Version 1.0.0**
@@ -43,7 +43,7 @@
   - Sass
 ---
 ## API
-  This project based on  API from [AlAdhan.com](https://aladhan.com/prayer-times-api).
+  - This project based on  API from [AlAdhan.com](https://aladhan.com/prayer-times-api).
 ---
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
