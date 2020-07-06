@@ -1,8 +1,8 @@
-![logo](./img/prayer.ico)
+
 # Islamic Prayer Times
 A website provides You with **Hijri Date** and **Prayer Times** depending on your time zone.
 #### version 1.0.0
-![App preview](./img/app.png)
+![App preview](./Readme_assets/app.png)
 ## Table of Contents
 - [General info](#general-info)
 - [Features](#features)
@@ -29,7 +29,7 @@ A web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to pr
   - Add more languages
 
 ## Manual
-![app map](./img/map.jpg)
+![app map](./Readme_assets/map.jpg)
  - Switching language
 	- To switch the language just press the button of your language.
 	- now it's only two languages **English** and **Arabic**. look at [Upcoming Features](#upcoming-features).
@@ -38,7 +38,7 @@ A web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to pr
 	 - let the app to detect your location to present prayers times for your Time zone.
 	 -  If you block location detecting it will present data for the default location ( Africa/Cairo ).
 	 - The time zone will be displayed at the bottom of the app
-    ![press Allow](./img/allow.png)
+    ![press Allow](./Readme_assets/allow.png)
 
 ## Clone
 To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer.
