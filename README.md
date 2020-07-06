@@ -38,6 +38,8 @@ A web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to pr
 	 - let the app to detect your location to present prayers times for your Time zone.
 	 -  If you block location detecting it will present data for the default location ( Africa/Cairo ).
 	 - The time zone will be displayed at the bottom of the app
+
+   
     ![press Allow](./Readme_assets/allow.png)
 
 ## Clone
