@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.a46e1dd5.chunk.css",
-    "main.js": "./static/js/main.f4bfbfc5.chunk.js",
-    "main.js.map": "./static/js/main.f4bfbfc5.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.1d873a65.js",
-    "runtime-main.js.map": "./static/js/runtime-main.1d873a65.js.map",
-    "static/js/2.11980a4d.chunk.js": "./static/js/2.11980a4d.chunk.js",
-    "static/js/2.11980a4d.chunk.js.map": "./static/js/2.11980a4d.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.520f3f32582b1290c281acbf74f38dd8.js": "./precache-manifest.520f3f32582b1290c281acbf74f38dd8.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.a46e1dd5.chunk.css.map": "./static/css/main.a46e1dd5.chunk.css.map",
-    "static/js/2.11980a4d.chunk.js.LICENSE.txt": "./static/js/2.11980a4d.chunk.js.LICENSE.txt"
+    "main.css": "/islamic-prayer-times/static/css/main.a46e1dd5.chunk.css",
+    "main.js": "/islamic-prayer-times/static/js/main.bceda0f7.chunk.js",
+    "main.js.map": "/islamic-prayer-times/static/js/main.bceda0f7.chunk.js.map",
+    "runtime-main.js": "/islamic-prayer-times/static/js/runtime-main.a66ec55f.js",
+    "runtime-main.js.map": "/islamic-prayer-times/static/js/runtime-main.a66ec55f.js.map",
+    "static/js/2.11980a4d.chunk.js": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js",
+    "static/js/2.11980a4d.chunk.js.map": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js.map",
+    "index.html": "/islamic-prayer-times/index.html",
+    "precache-manifest.01b886ab28648d06782b8b9406e22d31.js": "/islamic-prayer-times/precache-manifest.01b886ab28648d06782b8b9406e22d31.js",
+    "service-worker.js": "/islamic-prayer-times/service-worker.js",
+    "static/css/main.a46e1dd5.chunk.css.map": "/islamic-prayer-times/static/css/main.a46e1dd5.chunk.css.map",
+    "static/js/2.11980a4d.chunk.js.LICENSE.txt": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1d873a65.js",
+    "static/js/runtime-main.a66ec55f.js",
     "static/js/2.11980a4d.chunk.js",
     "static/css/main.a46e1dd5.chunk.css",
-    "static/js/main.f4bfbfc5.chunk.js"
+    "static/js/main.bceda0f7.chunk.js"
   ]
 }
