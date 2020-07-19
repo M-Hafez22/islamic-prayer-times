@@ -11,7 +11,7 @@ export function FetchedDataProvider(props) {
     // Get time
     const date = Math.floor(Date.now() / 1000);
     // Get Data
-    const [loaded, data] = useFetch(`http://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=5`);
+    const [loaded, data] = useFetch(`https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=5`);
 
     return (
         <FetchedDataContext.Provider value={[loaded, data]}>
