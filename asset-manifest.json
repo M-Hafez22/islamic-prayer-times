@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/islamic-prayer-times/static/css/main.a46e1dd5.chunk.css",
-    "main.js": "/islamic-prayer-times/static/js/main.bceda0f7.chunk.js",
-    "main.js.map": "/islamic-prayer-times/static/js/main.bceda0f7.chunk.js.map",
+    "main.js": "/islamic-prayer-times/static/js/main.c0d56b00.chunk.js",
+    "main.js.map": "/islamic-prayer-times/static/js/main.c0d56b00.chunk.js.map",
     "runtime-main.js": "/islamic-prayer-times/static/js/runtime-main.a66ec55f.js",
     "runtime-main.js.map": "/islamic-prayer-times/static/js/runtime-main.a66ec55f.js.map",
     "static/js/2.11980a4d.chunk.js": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js",
     "static/js/2.11980a4d.chunk.js.map": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js.map",
     "index.html": "/islamic-prayer-times/index.html",
-    "precache-manifest.01b886ab28648d06782b8b9406e22d31.js": "/islamic-prayer-times/precache-manifest.01b886ab28648d06782b8b9406e22d31.js",
+    "precache-manifest.bf2b332ca65c25b7b32b706867a84789.js": "/islamic-prayer-times/precache-manifest.bf2b332ca65c25b7b32b706867a84789.js",
     "service-worker.js": "/islamic-prayer-times/service-worker.js",
     "static/css/main.a46e1dd5.chunk.css.map": "/islamic-prayer-times/static/css/main.a46e1dd5.chunk.css.map",
     "static/js/2.11980a4d.chunk.js.LICENSE.txt": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a66ec55f.js",
     "static/js/2.11980a4d.chunk.js",
     "static/css/main.a46e1dd5.chunk.css",
-    "static/js/main.bceda0f7.chunk.js"
+    "static/js/main.c0d56b00.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d593beee454c88e4b0e1f9587b1dc416",
+    "revision": "f2be667cc74ac0c173e43c4778bfac35",
     "url": "/islamic-prayer-times/index.html"
   },
   {
-    "revision": "01eeaa34d56613741028",
+    "revision": "a09442a230f5d89a2aee",
     "url": "/islamic-prayer-times/static/css/main.a46e1dd5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/islamic-prayer-times/static/js/2.11980a4d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "01eeaa34d56613741028",
-    "url": "/islamic-prayer-times/static/js/main.bceda0f7.chunk.js"
+    "revision": "a09442a230f5d89a2aee",
+    "url": "/islamic-prayer-times/static/js/main.c0d56b00.chunk.js"
   },
   {
     "revision": "e054515d30de5aacadcb",
