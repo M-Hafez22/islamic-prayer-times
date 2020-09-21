@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/islamic-prayer-times/precache-manifest.bf2b332ca65c25b7b32b706867a84789.js"
+  "/islamic-prayer-times/precache-manifest.593a6ef58f0994e7a3ea077ba7b94a45.js"
 );
 
 self.addEventListener('message', (event) => {
