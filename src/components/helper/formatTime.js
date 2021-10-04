@@ -1,5 +1,10 @@
-
-export const addZero = (number) => (number < 10 ? `0${number}` : number);
+/**
+ * Add leading Zero to numbers
+ *  
+ * @param {number} number 
+ * @returns {string | number} the number with leading zero
+ */
+export const addLeadingZero = (number) => (number < 10 ? `0${number}` : number);
 
 export const to12Format = (time) => {
   
@@ -10,9 +15,9 @@ export const to12Format = (time) => {
   hour = (hour % 12) || 12;
 
   // formate Look
-  hour = addZero(hour);
+  hour = addLeadingZero(hour);
   minute.length < 2
-    ? minute = addZero(minute)
+    ? minute = addLeadingZero(minute)
     : minute = minute;
 
   return `${hour}:${minute}`;
@@ -26,5 +31,5 @@ export const getTimeFormat = (num) =>{
   num  %= 3600;
   const m = Math.floor(num / 60);
   const s =  num % 60;
-  return (`${addZero(h)}:${addZero(m)}:${addZero(s)}`)
+  return (`${addLeadingZero(h)}:${addLeadingZero(m)}:${addLeadingZero(s)}`)
 }

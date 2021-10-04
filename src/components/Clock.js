@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { useCurrentDate } from './hooks/useCurrentDate'
 import {LanguageContext} from './contexts/languageContext'
-import {to12Format, addZero} from './helper/formatTime'
+import {to12Format, addLeadingZero} from './helper/formatTime'
 
 export default function Clock() {
 
@@ -25,7 +25,7 @@ export default function Clock() {
           <h2>
             {to12Format(currentTime)}
             <span>
-              :{addZero(date.getSeconds())}
+              :{addLeadingZero(date.getSeconds())}
             </span>
           </h2>
           
