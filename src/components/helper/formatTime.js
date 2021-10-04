@@ -6,21 +6,28 @@
  */
 export const addLeadingZero = (number) => (number < 10 ? `0${number}` : number);
 
+
+/**
+ * make time in 12 format with leading zero
+ * 
+ * @param {string} time hours:minutes 5:39
+ * @returns {string} time 05:39
+ */
 export const to12Format = (time) => {
   
-  let hour = time.slice(0,time.indexOf(":"));
+  let hour = parseInt(time.slice(0,time.indexOf(":")));
   let minute = time.slice(time.indexOf(":")+1);
 
   //convert to 12 Formate
   hour = (hour % 12) || 12;
 
   // formate Look
-  hour = addLeadingZero(hour);
-  minute.length < 2
-    ? minute = addLeadingZero(minute)
-    : minute = minute;
+  let formatedHour = addLeadingZero(hour);
+  // minute.length < 2
+  //   ? minute = addLeadingZero(minute)
+  //   : minute = minute;
 
-  return `${hour}:${minute}`;
+  return `${formatedHour}:${minute}`;
 }
 
 
