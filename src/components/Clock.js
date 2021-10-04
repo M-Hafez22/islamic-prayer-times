@@ -3,6 +3,10 @@ import { useCurrentDate } from './hooks/useCurrentDate'
 import {LanguageContext} from './contexts/languageContext'
 import {to12Format, addLeadingZero} from './helper/formatTime'
 
+/**
+ * Display the time
+ */
+
 export default function Clock() {
 
     const [language] = useContext(LanguageContext);
