@@ -1,5 +1,11 @@
 import {useState} from 'react'
 
+/**
+ * Get the Current location of the user
+ * 
+ * @returns {[string, string]}
+ */
+
 export const  useLoaction = () =>  {
 
     const [latitude, setLatitude] = useState("30.008");
