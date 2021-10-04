@@ -2,6 +2,9 @@ import React, {useContext} from 'react'
 import {FetchedDataContext} from './contexts/FetchedDataContext'
 import {LanguageContext} from './contexts/languageContext'
 
+/**
+ * Displays Hijri date
+ */
 
 export default function HijriDate() {
 
