@@ -1,21 +1,33 @@
+/**
+ * Add leading Zero to numbers
+ *  
+ * @param {number} number 
+ * @returns {string | number} the number with leading zero
+ */
+export const addLeadingZero = (number) => (number < 10 ? `0${number}` : number);
 
-export const addZero = (number) => (number < 10 ? `0${number}` : number);
 
+/**
+ * make time in 12 format with leading zero
+ * 
+ * @param {string} time hours:minutes 5:39
+ * @returns {string} time 05:39
+ */
 export const to12Format = (time) => {
   
-  let hour = time.slice(0,time.indexOf(":"));
+  let hour = parseInt(time.slice(0,time.indexOf(":")));
   let minute = time.slice(time.indexOf(":")+1);
 
   //convert to 12 Formate
   hour = (hour % 12) || 12;
 
   // formate Look
-  hour = addZero(hour);
-  minute.length < 2
-    ? minute = addZero(minute)
-    : minute = minute;
+  let formatedHour = addLeadingZero(hour);
+  // minute.length < 2
+  //   ? minute = addLeadingZero(minute)
+  //   : minute = minute;
 
-  return `${hour}:${minute}`;
+  return `${formatedHour}:${minute}`;
 }
 
 
@@ -26,5 +38,5 @@ export const getTimeFormat = (num) =>{
   num  %= 3600;
   const m = Math.floor(num / 60);
   const s =  num % 60;
-  return (`${addZero(h)}:${addZero(m)}:${addZero(s)}`)
+  return (`${addLeadingZero(h)}:${addLeadingZero(m)}:${addLeadingZero(s)}`)
 }

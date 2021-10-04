@@ -2,12 +2,20 @@
 import { useCurrentDate } from './useCurrentDate'
 import {getTimeFormat} from '../helper/formatTime'
 
-export default function useNextPrayer(arr) {
+/**
+ * Calculates the remaining time for the next pray
+ * 
+ * @param {array} timesArr the list of pray Times
+ * @returns {[string, number]} the remaining time in string format, the index of the next pray in the pray list
+ */
+
+
+export default function useNextPrayer(timesArr) {
     // Get current time
     const date = useCurrentDate();
     // Get the date of the prayer
     const getTime = time => new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.substring(0, 2), time.substring(3, 5), 0, 0);
-    const prayDate = arr.map(p => getTime(p))
+    const prayDate = timesArr.map(p => getTime(p))
 
     // Get the remaining time for each prayer
     const timeLeft = prayDate.map(p => p =(date - p))
