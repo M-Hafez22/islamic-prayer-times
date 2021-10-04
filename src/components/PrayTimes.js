@@ -6,7 +6,9 @@ import {LanguageContext} from './contexts/languageContext'
 import useNextPrayer from './hooks/useNextPray'
 import {to12Format} from './helper/formatTime'
 
-
+/**
+ * Display prayer times and the remaining time for the next pray
+ */
 function PrayTimes() {
 
     // Contexts
