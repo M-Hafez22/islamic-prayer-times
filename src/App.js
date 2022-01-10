@@ -3,6 +3,7 @@ import Clock from './components/Clock'
 import HijriDate from './components/HijriDate'
 import PrayTimes from './components/PrayTimes'
 import Footer from './components/Footer'
+import ThemeToggle  from './components/ThemeToggle';
 import {FetchedDataProvider} from './components/contexts/FetchedDataContext'
 import {LanguageProvider} from './components/contexts/languageContext'
 import { ThemeContext } from './components/contexts/theme'
@@ -18,6 +19,7 @@ function App() {
           <Clock />
           <HijriDate />
           <PrayTimes />
+          <ThemeToggle />
           <Footer />
         </LanguageProvider>
       </FetchedDataProvider>
