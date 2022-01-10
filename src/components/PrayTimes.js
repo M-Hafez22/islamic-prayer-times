@@ -3,6 +3,7 @@ import PrayCard from './PrayCard'
 import RemainTime from './RemainTime'
 import {FetchedDataContext} from './contexts/FetchedDataContext'
 import {LanguageContext} from './contexts/languageContext'
+import { ThemeContext } from './contexts/theme'
 import useNextPrayer from './hooks/useNextPray'
 import {to12Format} from './helper/formatTime'
 
@@ -45,8 +46,11 @@ function PrayTimes() {
       :'Remaining time to';
     let prayer = prayerNames[nextPray];
 
+    // Toggle Themes (Dark, Light)
+    const [{isDark} ] = useContext(ThemeContext);
+    
     return (
-        <div className="prayTime">
+        <div className={isDark ?  "prayTimeDark" :  "prayTime"}>
             <ul
               style={{flexDirection: language === "ar" && " row-reverse"}}>
               { loaded &&  prayerTimeList }
