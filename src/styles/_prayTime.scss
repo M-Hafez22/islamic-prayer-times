@@ -36,3 +36,44 @@
         font-weight: 500;
     }
 }
+
+
+
+.prayTimeDark{
+
+    h1, h2{
+        padding : 0.5em;
+    }
+    ul{
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 1em;
+
+        li {
+            // border: solid $clr 2px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.48);
+            margin: .5em;
+            padding: 0.25em;
+            width: 6.5em;
+
+            & h3{
+              padding: 0.25em 0;
+            }
+        }
+
+    }
+    .active {
+      @include active;
+      box-shadow:(0px 2px 15px $active-clr);
+    }
+    .remainTime {
+        color: $ctive-clr-text;
+        font-size: 2em;
+        font-weight: 500;
+    }
+}
