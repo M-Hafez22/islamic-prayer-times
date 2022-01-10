@@ -1,0 +1,15 @@
+.toggleThemes{
+    position:absolute;
+    right: 1.5em;
+    bottom: 1.5em;
+
+    font-size: 1.25em;
+    padding: 0.5em;
+    
+    border: solid $clr 2px;
+    border-radius: 20px;
+    
+    text-transform: capitalize;
+    cursor: pointer;
+
+}
