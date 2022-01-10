@@ -1,10 +1,10 @@
 /**
  * Add leading Zero to numbers
  *  
- * @param {number} number 
- * @returns {string | number} the number with leading zero
+ * @param {string | number} number 
+ * @returns {string} the number with leading zero
  */
-export const addLeadingZero = (number) => (number < 10 ? `0${number}` : number);
+export const addLeadingZero = (number) => (number < 10 ? `0${number}` : number.toString());
 
 
 /**
@@ -23,9 +23,9 @@ export const to12Format = (time) => {
 
   // formate Look
   let formatedHour = addLeadingZero(hour);
-  // minute.length < 2
-  //   ? minute = addLeadingZero(minute)
-  //   : minute = minute;
+  minute.length < 2
+    ? minute = addLeadingZero(minute)
+    : minute = minute;
 
   return `${formatedHour}:${minute}`;
 }
