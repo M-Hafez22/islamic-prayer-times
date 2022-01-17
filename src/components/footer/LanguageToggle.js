@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import {LanguageContext} from './contexts/languageContext'
-import { ThemeContext } from './contexts/theme'
+import {LanguageContext} from '../contexts/languageContext'
+import { ThemeContext } from '../contexts/theme'
 
 export default function LanguageToggle() {
 

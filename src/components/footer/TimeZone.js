@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {FetchedDataContext} from './contexts/FetchedDataContext'
+import {FetchedDataContext} from '../contexts/FetchedDataContext'
 
 function TimeZone() {
   const [loaded, data] = useContext(FetchedDataContext);

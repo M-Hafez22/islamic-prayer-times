@@ -1,7 +1,7 @@
 import {useContext} from 'react'
-import LanguageToggle from './LanguageToggle'
-import TimeZone from './TimeZone'
-import ThemeToggle  from './ThemeToggle';
+import LanguageToggle from './footer/LanguageToggle'
+import TimeZone from './footer/TimeZone'
+import ThemeToggle  from './footer/ThemeToggle';
 import { ThemeContext } from './contexts/theme'
 
 export default function Footer() {
