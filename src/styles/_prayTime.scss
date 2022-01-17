@@ -1,10 +1,10 @@
-.prayTime{
-
-    h1, h2{
-        padding : 0.5em;
+@mixin prayTime {
+    h1,
+    h2 {
+        padding: 0.5em;
     }
-    ul{
-        margin:auto;
+    ul {
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -13,67 +13,48 @@
         padding: 1em;
 
         li {
-            // border: solid $clr 2px;
             border-radius: 20px;
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.48);
-            margin: .5em;
+            // border: solid $clr 2px;
+            // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.48); 
+            margin: 0.5em;
             padding: 0.25em;
             width: 6.5em;
 
-            & h3{
-              padding: 0.25em 0;
+            & h3 {
+                padding: 0.25em 0;
             }
         }
-
-    }
-    .active {
-        @include active($active-clr-light);
-
     }
     .remainTime {
-        color: $active-clr-light;
         font-size: 2em;
         font-weight: 500;
     }
 }
 
+.prayTimeLight {
+    @include prayTime;
 
-
-.prayTimeDark{
-
-    h1, h2{
-        padding : 0.5em;
+    li {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.48);
     }
-    ul{
-        margin:auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 1em;
+    .active {
+        @include active($active-clr-light);
+    }
+    .remainTime {
+        color: $active-clr-light;
+    }
+}
 
-        li {
-            // border: solid $clr 2px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.48);
-            margin: .5em;
-            padding: 0.25em;
-            width: 6.5em;
+.prayTimeDark {
+    @include prayTime;
 
-            & h3{
-              padding: 0.25em 0;
-            }
-        }
-
+    li {
+        box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.48);
     }
     .active {
         @include active($active-clr-dark);
-
     }
     .remainTime {
         color: $active-clr-dark;
-        font-size: 2em;
-        font-weight: 500;
     }
 }
