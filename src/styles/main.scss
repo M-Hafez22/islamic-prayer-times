@@ -30,13 +30,13 @@ App
 }
 
 .dark{
-  background-color: rgb(4, 22, 31);
-  color: rgb(201, 201, 201);
+  background-color: $clr-dark;
+  color: $clr-light;
 }
 
 .light{
-  background-color: rgb(199, 196, 196);
-  color: black;
+  background-color: $clr-light;
+  color: $clr-dark;
 }
 
 @media only screen and (min-width: 360px) {
