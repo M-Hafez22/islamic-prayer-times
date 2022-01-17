@@ -27,11 +27,13 @@
 
     }
     .active {
-      @include active;
-      box-shadow:(0px 2px 15px $active-clr);
+        color: $active-clr-light;
+        border-color: $active-clr-light;
+        font-weight: bolder;
+        box-shadow:(0px 2px 15px $active-clr-dark);
     }
     .remainTime {
-        color: $ctive-clr-text;
+        color: $active-clr-light;
         font-size: 2em;
         font-weight: 500;
     }
@@ -68,11 +70,13 @@
 
     }
     .active {
-      @include active;
-      box-shadow:(0px 2px 15px $active-clr);
+        color: $active-clr-dark;
+        border-color: $active-clr-dark;
+        font-weight: bolder;
+        box-shadow:(0px 2px 15px $active-clr-dark);
     }
     .remainTime {
-        color: $ctive-clr-text;
+        color: $active-clr-dark;
         font-size: 2em;
         font-weight: 500;
     }

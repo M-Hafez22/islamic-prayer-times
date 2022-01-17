@@ -1,5 +1,7 @@
 $clr: #444;
 $active-clr: #0ec094;
+$active-clr-dark: #00c192;
+$active-clr-light: #07352a;
 $ctive-clr-text: darken($active-clr, 20);
 
 @mixin active {
