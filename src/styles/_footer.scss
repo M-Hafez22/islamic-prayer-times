@@ -1,14 +1,14 @@
-.footer{
+@mixin footer($theme){
     width: 100vw;
 
     button{
       font-size: 1.5em;
       text-transform: capitalize;
-      border: solid $clr 2px;
+      border: solid $theme 2px;
       margin: 1em;
       padding: 0.5em;
       border-radius: 20px;
-      color: $clr;
+      color: $theme;
       cursor: pointer;
       min-width: 5em;
     }
@@ -18,9 +18,24 @@
     }
 }
 
+.footerLight{
+  @include footer($clr-dark);
+
+  .active {
+    @include active($active-clr-light);
+  }
+}
+
+.footerDark{
+  @include footer($clr-light);
+
+  .active {
+    @include active($active-clr-dark);
+  }
+}
+
 // Apply hover effect to non-touch screens only
 @media (hover: hover), (pointer: fine){
-  .footer{
     button{
       position:relative ;
       overflow: hidden;
@@ -45,5 +60,4 @@
         transition:  transform 350ms ease;
       }
     }
-  }
 }
