@@ -4,8 +4,9 @@ $active-clr-dark: #00c192;
 $active-clr-light: #07352a;
 $ctive-clr-text: darken($active-clr, 20);
 
-@mixin active {
-    color: $ctive-clr-text;
-    border-color: $active-clr;
+@mixin active ($color-theme) {
+    color: $color-theme;
+    border-color: $color-theme;
     font-weight: bolder;
+    box-shadow:(0px 2px 15px $active-clr-dark);
 }

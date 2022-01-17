@@ -27,10 +27,8 @@
 
     }
     .active {
-        color: $active-clr-light;
-        border-color: $active-clr-light;
-        font-weight: bolder;
-        box-shadow:(0px 2px 15px $active-clr-dark);
+        @include active($active-clr-light);
+
     }
     .remainTime {
         color: $active-clr-light;
@@ -70,10 +68,8 @@
 
     }
     .active {
-        color: $active-clr-dark;
-        border-color: $active-clr-dark;
-        font-weight: bolder;
-        box-shadow:(0px 2px 15px $active-clr-dark);
+        @include active($active-clr-dark);
+
     }
     .remainTime {
         color: $active-clr-dark;

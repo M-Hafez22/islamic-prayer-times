@@ -14,7 +14,7 @@
     }
 
     .active {
-      @include active;
+      @include active($active-clr-light);
     }
 }
 
