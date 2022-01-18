@@ -1,10 +1,7 @@
 @mixin footer($theme) {
     width: 100vw;
     overflow-y: hidden;
-    // Push to the end of the page (not good for small height)
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    margin-top:auto;
 
     button {
         font-size: 1.5em;
