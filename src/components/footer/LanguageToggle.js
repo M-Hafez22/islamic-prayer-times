@@ -1,41 +1,35 @@
-import React, {useContext} from 'react'
-import {LanguageContext} from '../contexts/languageContext'
+import React, { useContext } from 'react'
+import { LanguageContext } from '../contexts/languageContext'
 import { ThemeContext } from '../contexts/theme'
 
 export default function LanguageToggle() {
 
-    const [language, setLanguage] = useContext(LanguageContext);
+  const [language, setLanguage] = useContext(LanguageContext);
 
-    const toggle = (e) => {
-      e.currentTarget.textContent === "english"
-        ? setLanguage('en')
-        : setLanguage('ar')
-    }
+  const toggle = (e) => {
+    // console.log(e.currentTarget.value)
+    setLanguage(e.currentTarget.value)
+  }
 
-    // Toggle Themes (Dark, Light)
-    const [{isDark} ] = useContext(ThemeContext);
+  // Toggle Themes (Dark, Light)
+  const [{ isDark }] = useContext(ThemeContext);
 
-    return (
-        <div>
-            <button
-              onClick={(e) => toggle(e)}
-              className={
-                isDark 
-                  ? language === "en" ? 'active dark' : 'dark'
-                  : language === "en" ? 'active light' : 'light'
-                }>
-              english
-            </button>
+  return (
+    <div>
+      <input 
+      type="radio" 
+      value='en' 
+      className='radio-item' 
+      checked={language === "en"} 
+      onChange={(e) => toggle(e)} /> english
 
-            <button
-              onClick={(e) => toggle(e)}
-              className={
-                isDark 
-                  ? language === "ar" ? 'active dark' : 'dark'
-                  : language === "ar" ? 'active light' : 'light'
-                }>
-              عربى
-            </button>
-        </div>
-    )
+      <input 
+      type="radio" 
+      value='ar' 
+      className='radio-item' 
+      checked={language === "ar"} 
+      onChange={(e) => toggle(e)} /> عربى
+
+    </div>
+  )
 }
