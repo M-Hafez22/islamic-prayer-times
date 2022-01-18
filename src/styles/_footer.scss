@@ -1,18 +1,15 @@
 @mixin footer($theme) {
     width: 100vw;
     overflow-y: hidden;
-    margin-top:auto;
+    margin-top: auto;
 
-    button {
-        font-size: 1.5em;
-        text-transform: capitalize;
-        border: solid $theme 2px;
-        margin: 1em;
-        padding: 0.5em;
-        border-radius: 20px;
-        color: $theme;
+    .setting-btn {
+        font-size: 3em;
+        background: none;
+        border: none;
+        color: darken($active-clr,0);
         cursor: pointer;
-        min-width: 5em;
+        opacity: 50%;
     }
 
     .active {
@@ -38,28 +35,12 @@
 
 // Apply hover effect to non-touch screens only
 @media (hover: hover), (pointer: fine) {
-    button {
-        position: relative;
-        overflow: hidden;
+    .setting-btn {
+        transition: all 0.5s ease-in-out;
 
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom;
-            z-index: 5;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            background: currentColor;
-            opacity: 0.25;
-            transform: scaleX(0);
-            transform-origin: top;
-            transition: transform 350ms ease;
+        &:hover {
+            opacity: 100;
+            transform: rotate(180deg);
         }
     }
 }
