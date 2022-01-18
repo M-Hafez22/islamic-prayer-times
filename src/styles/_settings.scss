@@ -1,0 +1,25 @@
+.settings{
+    // position: absolute;
+    // bottom: 0;
+    // right: 0;
+    min-width: 100vw;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background: $clr;
+    // overflow-y: hidden;
+    transition: all 0.5s ease-in-out;
+
+}
+.showSettings{
+    transform: translateY(0%);
+    // visibility: visible;
+
+}
+
+.hideSettings{
+    transform: translateY(100%);
+    // visibility: hidden;
+
+}
