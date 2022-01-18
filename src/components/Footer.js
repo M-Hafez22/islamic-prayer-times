@@ -9,7 +9,9 @@ export default function Footer() {
     const [show, setShow] = useState(false)
 
     return (
-        <footer className={isDark ? "footerDark" : "footerLight"}>
+        <footer 
+            className={isDark ? "footerDark" : "footerLight"}
+            style={{height: show ? '100%' : '4.5em'}}>
             <button onClick={() => setShow(!show)} className='setting-btn'>
                 <img src="../assets/setting.png" alt="⚙️" />
             </button>

@@ -2,12 +2,19 @@
     width: 100vw;
     overflow-y: hidden;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+
 
     .setting-btn {
+        align-self: flex-end;
+        margin: 0 0.5em;
+        // transform: translateY(100%);
         font-size: 3em;
         background: none;
         border: none;
-        color: darken($active-clr,0);
+        color: darken($active-clr, 0);
         cursor: pointer;
         opacity: 50%;
     }
@@ -39,6 +46,7 @@
         transition: all 0.5s ease-in-out;
 
         &:hover {
+            transform: translateY(100%);
             opacity: 100;
             transform: rotate(180deg);
         }
