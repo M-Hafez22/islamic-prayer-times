@@ -14,7 +14,7 @@ function RadioButton({ label, value, onChange, checked }) {
             name={label}
             value={value}
             checked={checked}
-            className={isDark ? "dark" : "light"}
+            className={isDark ? "dark " : "light"}
         />
     )
 }
