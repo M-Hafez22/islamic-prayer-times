@@ -6,11 +6,12 @@ function ThemeToggle() {
 
   const [{ isDark }, toggleTheme] = useContext(ThemeContext);
 
-    return (
-        <button type="button" onClick={toggleTheme} className={isDark ? "toggleThemes dark" : 'toggleThemes light'}>
-        {isDark ? "to light" : "to Dark"}
-      </button>
-    )
+  return (
+    <div>
+      <input type="radio" checked={isDark} className={isDark ? "radio-item dark" : 'radio-item light' } onChange={toggleTheme}/> Dark
+      <input type="radio" checked={!isDark} className={isDark ? "radio-item dark" : 'radio-item light'} onChange={toggleTheme}/> Light
+    </div>
+  )
 }
 
 export default ThemeToggle
