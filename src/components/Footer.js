@@ -13,7 +13,8 @@ export default function Footer() {
             className={isDark ? "footerDark" : "footerLight"}
             style={{height: show ? '100%' : '4.5em'}}>
             <button onClick={() => setShow(!show)} className='setting-btn'>
-                <img src="../assets/setting.png" alt="⚙️" />
+                {/* <img src="../assets/setting.png" alt="⚙️" /> */}
+                ⚙️
             </button>
             <Settings show={show} />
         </footer>
