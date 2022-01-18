@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { LanguageContext } from '../contexts/languageContext'
-import { ThemeContext } from '../contexts/theme'
 import RadioButton from './RadioButton'
 
 export default function LanguageToggle() {
@@ -8,12 +7,8 @@ export default function LanguageToggle() {
   const [language, setLanguage] = useContext(LanguageContext);
 
   const toggle = (e) => {
-    // console.log(e.currentTarget.value)
     setLanguage(e.currentTarget.value)
   }
-
-  // Toggle Themes (Dark, Light)
-  const [{ isDark }] = useContext(ThemeContext);
 
   return (
     <div>
