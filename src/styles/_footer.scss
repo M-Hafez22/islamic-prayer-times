@@ -1,63 +1,54 @@
-@mixin footer($theme){
+@mixin footer($theme) {
     width: 100vw;
+    overflow-y: hidden;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
 
-    button{
-      font-size: 1.5em;
-      text-transform: capitalize;
-      border: solid $theme 2px;
-      margin: 1em;
-      padding: 0.5em;
-      border-radius: 20px;
-      color: $theme;
-      cursor: pointer;
-      min-width: 5em;
+
+    .setting-btn {
+        align-self: flex-end;
+        margin: 0 0.5em;
+        // transform: translateY(100%);
+        font-size: 3em;
+        background: none;
+        border: none;
+        color: darken($active-clr, 0);
+        cursor: pointer;
+        // opacity: 50%;
     }
 
     .active {
-      @include active($active-clr-light);
+        @include active($active-clr-light);
     }
 }
 
-.footerLight{
-  @include footer($clr-dark);
+.footerLight {
+    @include footer($clr-dark);
 
-  .active {
-    @include active($active-clr-light);
-  }
+    .active {
+        @include active($active-clr-light);
+    }
 }
 
-.footerDark{
-  @include footer($clr-light);
+.footerDark {
+    @include footer($clr-light);
 
-  .active {
-    @include active($active-clr-dark);
-  }
+    .active {
+        @include active($active-clr-dark);
+    }
 }
 
 // Apply hover effect to non-touch screens only
-@media (hover: hover), (pointer: fine){
-    button{
-      position:relative ;
-      overflow: hidden;
+@media (hover: hover), (pointer: fine) {
+    .setting-btn {
+        transition: all 0.5s ease-in-out;
 
-      &:hover::after{
-        transform: scaleX(1);
-        transform-origin:bottom;
-        z-index: 5;
-      }
-
-      &::after{
-        content: '';
-        position:absolute ;
-        left: 0;
-        top: 0;
-        height:100%;
-        width: 100%;
-        background:currentColor;
-        opacity: 0.25;
-        transform: scaleX(0);
-        transform-origin:top;
-        transition:  transform 350ms ease;
-      }
+        &:hover {
+            transform: translateY(100%);
+            opacity: 100;
+            transform: rotate(180deg);
+        }
     }
 }
