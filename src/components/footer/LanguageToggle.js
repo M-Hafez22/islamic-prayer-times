@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { LanguageContext } from '../contexts/languageContext'
 import { ThemeContext } from '../contexts/theme'
+import RadioButton from './RadioButton'
 
 export default function LanguageToggle() {
 
@@ -16,19 +17,20 @@ export default function LanguageToggle() {
 
   return (
     <div>
-      <input 
-      type="radio" 
-      value='en' 
-      className='radio-item' 
-      checked={language === "en"} 
-      onChange={(e) => toggle(e)} /> english
-
-      <input 
-      type="radio" 
-      value='ar' 
-      className='radio-item' 
-      checked={language === "ar"} 
-      onChange={(e) => toggle(e)} /> عربى
+      <div className='radio'>
+        <RadioButton
+          label="english"
+          value={'en'}
+          checked={language === "en"}
+          onChange={(e) => toggle(e)}
+        />
+        <RadioButton
+          label="عربى"
+          value={'ar'}
+          checked={language === "ar"}
+          onChange={(e) => toggle(e)}
+        />
+      </div>
 
     </div>
   )
