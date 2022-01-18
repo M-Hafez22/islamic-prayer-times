@@ -1,0 +1,32 @@
+.radio {
+	background: $clr;
+    font-size: 1em;
+	padding: 0.25em;
+	border-radius: $border-radius;
+	position: relative;
+
+    &  input {
+        width: auto;
+        height: 100%;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: $border-radius;
+        padding: 0.3em 0.6em;
+        background: $clr;
+        font-size: 1.25em;
+        transition: all 100ms linear;
+
+        &:checked {
+            background-image: linear-gradient(90deg, $active-clr-dark, darken($active-clr-dark, 25%));
+        }
+
+        &:before {
+            content: attr(label);
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+        
+    }
+}
