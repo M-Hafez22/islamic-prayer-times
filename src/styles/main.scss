@@ -2,10 +2,10 @@
 @import "clock";
 @import "date";
 @import "prayTime";
-@import "footer";
-@import "toggleThemes";
-@import "settings";
-@import "radioButton";
+@import "./footer/footer";
+@import "./footer/toggleThemes";
+@import "./footer/settings";
+@import "./footer/radioButton";
 
 /*
 App
