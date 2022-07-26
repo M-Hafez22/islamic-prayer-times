@@ -18,7 +18,7 @@ function PrayTimes() {
     const timings = loaded && data.timings;
 
     // Remove additional data
-    const additional = ['Sunrise', 'Imsak','Midnight', 'Sunset'];
+    const additional = ['Sunrise', 'Imsak','Midnight', 'Sunset', 'Firstthird', 'Lastthird'];
     additional.forEach(i => delete timings[i]);
 
     // Get Prayer Names
