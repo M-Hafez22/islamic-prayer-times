@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/islamic-prayer-times/static/css/main.ddd4cae1.css",
-    "main.js": "/islamic-prayer-times/static/js/main.936369ea.js",
+    "main.js": "/islamic-prayer-times/static/js/main.b58dd75e.js",
     "index.html": "/islamic-prayer-times/index.html",
     "main.ddd4cae1.css.map": "/islamic-prayer-times/static/css/main.ddd4cae1.css.map",
-    "main.936369ea.js.map": "/islamic-prayer-times/static/js/main.936369ea.js.map"
+    "main.b58dd75e.js.map": "/islamic-prayer-times/static/js/main.b58dd75e.js.map"
   },
   "entrypoints": [
     "static/css/main.ddd4cae1.css",
-    "static/js/main.936369ea.js"
+    "static/js/main.b58dd75e.js"
   ]
 }
