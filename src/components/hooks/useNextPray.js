@@ -18,7 +18,7 @@ export default function useNextPrayer(timesArr) {
     const prayDate = timesArr.map(p => getTime(p))
 
     // Get the remaining time for each prayer
-    const timeLeft = prayDate.map(p => p =(date - p))
+    const timeLeft = prayDate.map(p => date - p)
 
     // Get the remaining prayers for today
     const remainingPrayers = timeLeft.filter(el => el < 0)
