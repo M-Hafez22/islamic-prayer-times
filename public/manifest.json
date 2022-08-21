@@ -10,5 +10,8 @@
     "32": "icon/praying-32.png",
     "64": "icon/praying-64.png",
     "128": "icon/praying-128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
   }
 }
