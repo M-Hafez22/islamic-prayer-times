@@ -13,7 +13,7 @@ A web Application that provides You with **Hijri Date**, **Prayer Times** and **
 
 - [General info](#general-info)
 - [Features](#features)
-- [Upcoming Features](#upcoming-features)
+<!-- - [Upcoming Features](#upcoming-features) -->
 - [Manual](#manual)
 - [Clone](#clone)
 - [Technologies](#technologies)
@@ -35,10 +35,7 @@ Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/praye
 3. The prayers times for one day
 4. Remaining time for the next prayer
 
-## Upcoming Features
-
-  - Changing Location manually
-  - Add more languages
+<!-- ## Upcoming Features -->
 
 ## Manual
 
