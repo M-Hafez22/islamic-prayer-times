@@ -39,10 +39,10 @@ Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/praye
 
 ## Manual
 
-![app map](./Readme_assets/map.jpg)
- - Switching language
-	- To switch the language just press the button of your language.
-	- now it's only two languages **English** and **Arabic**. look at [Upcoming Features](#upcoming-features).
+- Switching language
+  1. Press the gear icon on the bottom right corner.
+  2. The languages will appear in the bottom left corner.
+  3. Press the button of your language.
 
  - Location
 	 - let the app to detect your location to present prayers times for your Time zone.
