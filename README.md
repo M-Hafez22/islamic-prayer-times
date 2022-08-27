@@ -24,6 +24,8 @@ Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with
 
+The browser tab icon from [flaticon](https://www.flaticon.com) made by [kerismaker](https://www.flaticon.com/authors/kerismaker)
+
 - **Hijri date**
 - **Prayers times**
 - **The Remaining Time to the next pray**
