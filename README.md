@@ -1,11 +1,13 @@
 
-# Islamic Prayer Times
+# [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 [![Mozilla Add-on](https://img.shields.io/amo/users/islamic-prayer-times?style=social&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
 [![Mozilla Add-on](https://img.shields.io/amo/dw/islamic-prayer-times?style=social&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
 [![Mozilla Add-on](https://img.shields.io/amo/stars/islamic-prayer-times?style=falt&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
 
 A web Application that provides You with **Hijri Date**, **Prayer Times** and **The Remaining Time to the next pray** depending on your time zone.
+
+Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 ![App preview](./Readme_assets/app-preview.png)
 
