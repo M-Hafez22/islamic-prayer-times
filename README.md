@@ -44,6 +44,11 @@ Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/praye
   2. The languages will appear in the bottom left corner.
   3. Press the button of your language.
 
+- Switching Theme
+  1. Press the gear icon on the bottom right corner.
+  2. The Themes will appear in the bottom right corner.
+  3. Press the button of your Theme.
+
  - Location
 	 - let the app to detect your location to present prayers times for your Time zone.
 	 -  If you block location detecting it will present data for the default location ( Africa/Cairo ).
