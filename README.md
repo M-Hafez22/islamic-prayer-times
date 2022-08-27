@@ -1,8 +1,7 @@
 
 # Islamic Prayer Times
 
-A website provides You with **Hijri Date** and **Prayer Times** depending on your time zone.
-#### version 1.0.0
+A web Application that provides You with **Hijri Date**, **Prayer Times** and **The Remaining Time to the next pray** depending on your time zone.
 
 ![App preview](./Readme_assets/app.png)
 
