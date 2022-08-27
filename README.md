@@ -1,9 +1,13 @@
 
 # Islamic Prayer Times
+
 A website provides You with **Hijri Date** and **Prayer Times** depending on your time zone.
 #### version 1.0.0
+
 ![App preview](./Readme_assets/app.png)
+
 ## Table of Contents
+
 - [General info](#general-info)
 - [Features](#features)
 - [Upcoming Features](#upcoming-features)
@@ -14,21 +18,25 @@ A website provides You with **Hijri Date** and **Prayer Times** depending on you
 - [License](#license)
 
 ## General info
+
 A web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with the **Prayers times** and **Hijri date**.
 
  > This is a practice to what I learned about **React** & **React Hooks**
 
 ## Features
+
 1. Current time ( in 12 formats)
 2. Hijri Date
 3. The prayers times for one day
 4. Remaining time for the next prayer
 
 ## Upcoming Features
+
   - Changing Location manually
   - Add more languages
 
 ## Manual
+
 ![app map](./Readme_assets/map.jpg)
  - Switching language
 	- To switch the language just press the button of your language.
@@ -43,6 +51,7 @@ A web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to pr
     ![press Allow](./Readme_assets/allow.png)
 
 ## Clone
+
 To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer.
 From your command line:
 
@@ -64,6 +73,7 @@ From your command line:
 
 5. when it opens in your browser it will ask for detecting your location
 	choose *Allow*
+
 ## Technologies
 
  - React version : ^16.13.1
@@ -77,8 +87,8 @@ From your command line:
 
 - I love this extension and I want to make a web app that provides the same features so after leaning React & React Hooks I start to implement what I learn to make what I like.
 
-
 ## License
+
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - Licensed under the **[MIT license](LICENSE)**
