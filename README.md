@@ -18,9 +18,11 @@ A web Application that provides You with **Hijri Date**, **Prayer Times** and **
 
 ## General info
 
-A web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with the **Prayers times** and **Hijri date**.
+Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with
 
- > This is a practice to what I learned about **React** & **React Hooks**
+- **Hijri date**
+- **Prayers times**
+- **The Remaining Time to the next pray**
 
 ## Features
 
