@@ -13,10 +13,8 @@ A web Application that provides You with **Hijri Date**, **Prayer Times** and **
 
 - [General info](#general-info)
 - [Features](#features)
-<!-- - [Upcoming Features](#upcoming-features) -->
 - [Manual](#manual)
 - [Clone](#clone)
-- [Technologies](#technologies)
 - [Inspiration](#inspiration)
 - [License](#license)
 
@@ -34,8 +32,6 @@ Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/praye
 2. Hijri Date
 3. The prayers times for one day
 4. Remaining time for the next prayer
-
-<!-- ## Upcoming Features -->
 
 ## Manual
 
@@ -69,13 +65,6 @@ From your command line:
 4. Run the app
   `npm start`
 5. when it opens in your browser it will ask for detecting your location choose *Allow*
-
-## Technologies
-
- - React version : ^16.13.1
- - Sass version   : ^4.13.1
-
-    you can see all dependencies from **[package.json](package.json)**
 
 ## Inspiration
 
