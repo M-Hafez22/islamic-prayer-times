@@ -49,13 +49,11 @@ Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/praye
   2. The Themes will appear in the bottom right corner.
   3. Press the button of your Theme.
 
- - Location
-	 - let the app to detect your location to present prayers times for your Time zone.
-	 -  If you block location detecting it will present data for the default location ( Africa/Cairo ).
-	 - The time zone will be displayed at the bottom of the app
-
-
-    ![press Allow](./Readme_assets/allow.png)
+- Location
+  - let the app to detect your location to present prayers times for your Time zone.
+  - If you block location detecting it will present data for the default location ( Africa/Cairo ).
+  ![press Allow](./Readme_assets/allow.png)
+  - To check the used time zone *press the gear icon on the bottom right* corner The time zone will be displayed at the bottom of the app
 
 ## Clone
 
