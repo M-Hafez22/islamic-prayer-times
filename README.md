@@ -3,7 +3,7 @@
 
 A web Application that provides You with **Hijri Date**, **Prayer Times** and **The Remaining Time to the next pray** depending on your time zone.
 
-![App preview](./Readme_assets/app.png)
+![App preview](./Readme_assets/app-preview.png)
 
 ## Table of Contents
 
