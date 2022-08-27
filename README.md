@@ -61,23 +61,14 @@ To clone and run this application, you'll need Git and npm (which comes with Nod
 From your command line:
 
 1. Clone this repository
-
-	$ git clone https://github.com/M-Hafez22/islamic-prayer-times.git
-
-1. Go into the repository
-
-    $ cd islamic-prayer-times
-
+  `git clone https://github.com/M-Hafez22/islamic-prayer-times.git`
+2. Go into the repository
+  `cd islamic-prayer-times`
 3. Install dependencies
-
-	$ npm install
-
+  `npm install`
 4. Run the app
-
-	$ npm start
-
-5. when it opens in your browser it will ask for detecting your location
-	choose *Allow*
+  `npm start`
+5. when it opens in your browser it will ask for detecting your location choose *Allow*
 
 ## Technologies
 
