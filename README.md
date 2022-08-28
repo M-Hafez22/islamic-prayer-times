@@ -17,6 +17,7 @@ Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 - [Features](#features)
 - [Manual](#manual)
 - [Clone](#clone)
+- [Extension](#extension)
 - [Inspiration](#inspiration)
 - [License](#license)
 
@@ -69,6 +70,28 @@ From your command line:
 4. Run the app
   `npm start`
 5. when it opens in your browser it will ask for detecting your location choose *Allow*
+
+## Extension
+
+### Build for firefox
+
+- Open [package.json](./package.json) and make sure that **homepage** set to **.** the current directory
+
+  ```json
+  "homepage": "."
+  ```
+
+- Open [manifest.json](./public/manifest.json) in the public directory and make sure that **manifest_version** is set to **2**
+
+  ```json
+  "manifest_version": 2,
+  ```
+
+- Now run buildextension script
+
+  ```bash
+  npm run buildextension
+  ```
 
 ## Inspiration
 
