@@ -6,6 +6,7 @@
 [![Mozilla Add-on](https://img.shields.io/amo/stars/islamic-prayer-times?style=falt&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
 
 [![Docker](https://img.shields.io/badge/-Docker_Image-2497EC?style=for-the-badge&logoColor=fff&logo=docker)](https://hub.docker.com/r/mohamedhafez/islamic_prayer_times)
+[![RainWallpaper](https://img.shields.io/badge/RainWallpaper-100000?style=for-the-badge&logo=github)](https://github.com/M-Hafez22/Prayer_Times)
 
 A web Application that provides You with **Hijri Date**, **Prayer Times**, and **The Remaining Time to the next prayer** depending on your time zone.
 
@@ -112,6 +113,10 @@ From your command line:
   ```bash
   npm run buildextension
   ```
+
+### RainWallpaper
+
+The RainWallpaper theme is in this repository [Prayer_Times](https://github.com/M-Hafez22/Prayer_Times)
 
 ## Inspiration
 
