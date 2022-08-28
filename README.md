@@ -25,13 +25,9 @@ Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 ## General info
 
-Islamic Prayer Times is a web app that uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with
+Islamic Prayer Times is a web app that uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with **Hijri date**, **Prayers times**, and **The Remaining Time to the next pray**
 
-The browser tab icon from [flaticon](https://www.flaticon.com) made by [kerismaker](https://www.flaticon.com/authors/kerismaker)
-
-- **Hijri date**
-- **Prayers times**
-- **The Remaining Time to the next pray**
+> The browser tab icon from [flaticon](https://www.flaticon.com) made by [kerismaker](https://www.flaticon.com/authors/kerismaker)
 
 ## Features
 
