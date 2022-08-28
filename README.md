@@ -73,6 +73,8 @@ From your command line:
 
 ## Extension
 
+> It's avilable on Mozilla Add-ons as [Islamic Prayer Times](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
+
 ### Build for firefox
 
 - Open [package.json](./package.json) and make sure that **homepage** set to **.** the current directory
