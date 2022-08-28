@@ -7,7 +7,7 @@
 
 [![Docker](https://img.shields.io/badge/-Docker_Image-2497EC?style=for-the-badge&logoColor=fff&logo=docker)](https://hub.docker.com/r/mohamedhafez/islamic_prayer_times)
 
-A web Application that provides You with **Hijri Date**, **Prayer Times** and **The Remaining Time to the next pray** depending on your time zone.
+A web Application that provides You with **Hijri Date**, **Prayer Times**, and **The Remaining Time to the next prayer** depending on your time zone.
 
 Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
@@ -25,7 +25,7 @@ Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 ## General info
 
-Islamic Prayer Times is a web app uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with
+Islamic Prayer Times is a web app that uses **[AlAdhan.com](https://aladhan.com/prayer-times-api)** API to provide the user with
 
 The browser tab icon from [flaticon](https://www.flaticon.com) made by [kerismaker](https://www.flaticon.com/authors/kerismaker)
 
@@ -53,7 +53,7 @@ The browser tab icon from [flaticon](https://www.flaticon.com) made by [kerismak
   3. Press the button of your Theme.
 
 - Location
-  - let the app to detect your location to present prayers times for your Time zone.
+  - let the app detect your location to present prayer times for your Time zone.
   - If you block location detecting it will present data for the default location ( Africa/Cairo ).
   ![press Allow](./Readme_assets/allow.png)
   - To check the used time zone *press the gear icon on the bottom right* corner The time zone will be displayed at the bottom of the app
@@ -75,7 +75,7 @@ From your command line:
 
 ## Extension
 
-> It's avilable on Mozilla Add-ons as [Islamic Prayer Times](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
+> It's available on Mozilla Add-ons as [Islamic Prayer Times](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
 
 ### Build for firefox
 
@@ -119,7 +119,7 @@ From your command line:
 
 ## Inspiration
 
-- This project inspired by a chrome extension called **[Islamway Ramadan | طريق الإسلام](https://chrome.google.com/webstore/detail/islamway-ramadan-%D8%B7%D8%B1%D9%8A%D9%82-%D8%A7%D9%84%D8%A5/mcbgkoikidgnmbekipnnhhhjhcaioflb)** which is powered by **[Islamway](https://ar.islamway.net/)** website.
+- This project was inspired by a chrome extension called **[Islamway Ramadan | طريق الإسلام](https://chrome.google.com/webstore/detail/islamway-ramadan-%D8%B7%D8%B1%D9%8A%D9%82-%D8%A7%D9%84%D8%A5/mcbgkoikidgnmbekipnnhhhjhcaioflb)** which is powered by **[Islamway](https://ar.islamway.net/)** website.
 
 ## License
 
