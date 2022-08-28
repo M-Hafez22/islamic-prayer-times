@@ -93,6 +93,26 @@ From your command line:
   npm run buildextension
   ```
 
+### Build for Chrome
+
+- Open [package.json](./package.json) and make sure that **homepage** set to **.** the current directory
+
+  ```json
+  "homepage": "."
+  ```
+
+- Open [manifest.json](./public/manifest.json) in the public directory and make sure that **manifest_version** is set to **3**
+
+  ```json
+  "manifest_version": 3,
+  ```
+
+- Now run buildextension script
+
+  ```bash
+  npm run buildextension
+  ```
+
 ## Inspiration
 
 - This project inspired by a chrome extension called **[Islamway Ramadan | طريق الإسلام](https://chrome.google.com/webstore/detail/islamway-ramadan-%D8%B7%D8%B1%D9%8A%D9%82-%D8%A7%D9%84%D8%A5/mcbgkoikidgnmbekipnnhhhjhcaioflb)** which is powered by **[Islamway](https://ar.islamway.net/)** website.
