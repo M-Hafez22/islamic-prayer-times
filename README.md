@@ -3,10 +3,6 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/m-hafez22/islamic-prayer-times)
 
-[![Mozilla Add-on](https://img.shields.io/amo/users/islamic-prayer-times?style=social&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
-[![Mozilla Add-on](https://img.shields.io/amo/dw/islamic-prayer-times?style=social&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
-[![Mozilla Add-on](https://img.shields.io/amo/stars/islamic-prayer-times?style=falt&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
-
 [![Docker](https://img.shields.io/badge/-Docker_Image-2497EC?style=for-the-badge&logoColor=fff&logo=docker)](https://hub.docker.com/r/mohamedhafez/islamic_prayer_times)
 [![RainWallpaper](https://img.shields.io/badge/RainWallpaper-100000?style=for-the-badge&logo=github)](https://github.com/M-Hafez22/Prayer_Times)
 
