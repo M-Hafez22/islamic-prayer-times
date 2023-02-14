@@ -18,4 +18,10 @@ describe('Render Clock', () => {
     const seconds = getByText(`:${addLeadingZero(date.getSeconds())}`)
     expect(seconds).toBeInTheDocument();
   })
+  it("render AM or PM", () => {
+    const { getByText } = render(<ThemeProvider><App /></ThemeProvider>);
+    let date = new Date();
+    const dayOrNight = getByText(date.getHours() < 12 ? "AM" : "PM")
+    expect(dayOrNight).toBeInTheDocument();
+  })
 })
