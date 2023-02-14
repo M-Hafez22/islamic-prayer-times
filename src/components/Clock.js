@@ -29,7 +29,7 @@ export default function Clock() {
         </span>
       </h2>
 
-      {/* <span>{dayOrNight[language]}</span> */}
+      <span>{dayOrNight[language]}</span>
 
     </div>
   )
