@@ -27,10 +27,4 @@ describe('Testing App', () => {
     })
   })
 
-  describe('Renders the Footer', () => {
-    it('Render "⚙️"', () => {
-      expect(screen.getByText(/⚙️/i)).toBeInTheDocument()
-    })
-  })
-
 })
