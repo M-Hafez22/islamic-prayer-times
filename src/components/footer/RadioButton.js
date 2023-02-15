@@ -7,6 +7,7 @@ function RadioButton({ label, value, onChange, checked }) {
     const [{ isDark }] = useContext(ThemeContext);
     return (
         <input
+            data-testid={label}
             label={label}
             type="radio"
             id={label}

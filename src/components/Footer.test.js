@@ -17,5 +17,11 @@ describe('Renders the Footer', () => {
     it('Render "⚙️"', () => {
         expect(screen.getByRole('button', { name: '⚙️' })).toBeInTheDocument()
     })
-
+    it('Render Setting button', () => {
+        expect(screen.getAllByRole('radio').length).toBe(4)
+        expect(screen.getByTestId(/dark/i)).toBeInTheDocument()
+        expect(screen.getByTestId(/light/i)).toBeInTheDocument()
+        expect(screen.getByTestId(/english/i)).toBeInTheDocument()
+        expect(screen.getByTestId(/عربى/i)).toBeInTheDocument()
+    })
 })
