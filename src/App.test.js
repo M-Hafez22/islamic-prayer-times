@@ -25,3 +25,13 @@ describe('Render Clock', () => {
     expect(screen.getByText(date.getHours() < 12 ? "AM" : "PM")).toBeInTheDocument();
   })
 })
+
+describe('Renders the Footer', () => {
+  beforeEach(() => {
+    render(<ThemeProvider><App /></ThemeProvider>);
+  })
+  it('Render "⚙️"', () => {
+    expect(screen.getByText(/⚙️/i)).toBeInTheDocument()
+  })
+
+})
