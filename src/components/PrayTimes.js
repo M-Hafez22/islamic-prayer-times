@@ -5,8 +5,6 @@ import {FetchedDataContext} from './contexts/FetchedDataContext'
 import {LanguageContext} from './contexts/languageContext'
 import { ThemeContext } from './contexts/theme'
 import useNextPrayer from './hooks/useNextPray'
-import {to12Format} from './helper/formatTime'
-
 
 function PrayTimes() {
 
@@ -36,7 +34,7 @@ function PrayTimes() {
           key={p}
           active={i === nextPray ? "active" : ""}
           name={p}
-          time={to12Format(prayTimes[i])}
+          time={prayTimes[i]}
         />
     ))
 

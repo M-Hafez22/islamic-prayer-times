@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { LanguageContext } from '../contexts/languageContext'
 import RadioButton from './RadioButton'
 
@@ -8,6 +8,7 @@ export default function LanguageToggle() {
 
   const toggle = (e) => {
     setLanguage(e.currentTarget.value)
+    localStorage.setItem("language", (e.currentTarget.value))
   }
 
   return (
