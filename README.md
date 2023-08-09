@@ -97,7 +97,7 @@ From your command line:
 
 ### Build for Chrome
 
-> You can download the Chrome extension release from [Here](https://github.com/M-Hafez22/islamic-prayer-times/releases/tag/chrome-extension-v1.1.0)
+> You can download the Chrome extension release from [Here](https://github.com/M-Hafez22/islamic-prayer-times/releases/download/v1.1.1/islamic-prayer-times-chrome-extention-v1.1.1.zip)
 
 - Open [package.json](./package.json) and make sure that **homepage** set to **.** the current directory
 
