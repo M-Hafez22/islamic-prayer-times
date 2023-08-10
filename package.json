@@ -43,5 +43,12 @@
   "devDependencies": {
     "gh-pages": "^5.0.0",
     "mini-css-extract-plugin": "2.7.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js"
+    ]
   }
 }
