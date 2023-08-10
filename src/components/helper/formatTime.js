@@ -24,10 +24,10 @@ export const to12Format = (time) => {
 
   // formate Look
   let formatedHour = addLeadingZero(hour);
-  minute.length < 2
-    ? minute = addLeadingZero(minute)
-    : minute = minute;
-
+  // minute.length < 2
+  //   ? minute = addLeadingZero(minute)
+  //   : minute = minute;
+  minute = addLeadingZero(minute);
   return `${formatedHour}:${minute}`;
 }
 
