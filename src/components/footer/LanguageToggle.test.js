@@ -24,15 +24,12 @@ describe('Change App Language', () => {
 
     it('change language to Arabic when Arabic radio button is clicked', () => {
         fireEvent.click(screen.getByTestId('عربى'));
-        // expect(setLanguage).toHaveBeenCalledWith('ar');
-        // expect(screen.getByText('المغرب')).toBeInTheDocument();
         expect(localStorage.getItem('language')).toBe('ar');
     });
 
     it('change language to English when English radio button is clicked', () => {
         fireEvent.click(screen.getByTestId('عربى'));
         fireEvent.click(screen.getByTestId('english'));
-        // expect(setLanguage).toHaveBeenCalledWith('en');
         expect(localStorage.getItem('language')).toBe('en');
     });
 });
