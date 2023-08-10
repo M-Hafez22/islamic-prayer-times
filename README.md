@@ -125,7 +125,7 @@ The RainWallpaper theme is in this repository [Prayer_Times](https://github.com/
 
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square&logo=license)](/LICENSE)
 
 - Licensed under the **[MIT license](LICENSE)**
 - Copyright (c) 2020 Mohamed Hafez
