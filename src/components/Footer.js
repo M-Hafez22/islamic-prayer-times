@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Settings from './footer/Settings';
 import { ThemeContext } from './contexts/theme'
 
@@ -9,11 +9,10 @@ export default function Footer() {
     const [show, setShow] = useState(false)
 
     return (
-        <footer 
+        <footer
             className={isDark ? "footerDark" : "footerLight"}
-            style={{height: show ? '100%' : '4.5em'}}>
+            style={{ height: show ? '100%' : '4.5em' }}>
             <button onClick={() => setShow(!show)} className='setting-btn'>
-                {/* <img src="../assets/setting.png" alt="⚙️" /> */}
                 ⚙️
             </button>
             <Settings show={show} />
