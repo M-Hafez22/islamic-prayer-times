@@ -19,6 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test  --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "overrides": {
