@@ -16,4 +16,7 @@ describe('Renders the Footer', () => {
     it('Renders the prayer Name', () => {
         expect(screen.getByText('Dhuhr')).toBeInTheDocument()
     })
+    it('Renders the prayer Time in 12 format', () => {
+        expect(screen.getByText('01:02')).toBeInTheDocument()
+    })
 })
