@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { FetchedDataProvider } from './contexts/FetchedDataContext';
 import { LanguageProvider } from './contexts/languageContext';
@@ -24,4 +24,13 @@ describe('Renders the Footer', () => {
         expect(screen.getByTestId(/english/i)).toBeInTheDocument()
         expect(screen.getByTestId(/عربى/i)).toBeInTheDocument()
     })
-})
+
+    it('Open And Close Setting panel', () => {
+        const settingsButton = screen.getByRole('button', { name: '⚙️' });
+        expect(screen.getByTestId('setting').classList).toContain('hideSettings')
+        fireEvent.click(settingsButton);
+        expect(screen.getByTestId('setting').classList).toContain('showSettings')
+        fireEvent.click(settingsButton);
+        expect(screen.getByTestId('setting').classList).toContain('hideSettings')
+    });
+});
