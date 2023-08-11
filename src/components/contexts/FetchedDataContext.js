@@ -1,13 +1,13 @@
 import React, { createContext } from "react";
 import { useFetch } from '../hooks/useFetch'
-import { useLoaction } from '../hooks/useLocation';
+import { useLocation } from '../hooks/useLocation';
 
 export const FetchedDataContext = createContext();
 
 export function FetchedDataProvider(props) {
 
     // Get Local coords
-    const [latitude, longitude] = useLoaction();
+    const [latitude, longitude] = useLocation();
     // Get time
     const date = Math.floor(Date.now() / 1000);
     // Get Data
