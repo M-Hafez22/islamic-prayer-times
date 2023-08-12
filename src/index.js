@@ -5,8 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from './components/contexts/theme'
 
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = document.getElementById("root")
+if(!root) {
+  throw new Error("No Element with 'root' id")
+}
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <ThemeProvider>
       <App />
