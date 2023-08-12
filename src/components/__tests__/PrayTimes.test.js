@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import PrayTimes from './PrayTimes';
-import { LanguageContext } from './contexts/languageContext';
-import { FetchedDataContext } from './contexts/FetchedDataContext';
-import { ThemeContext } from './contexts/theme';
+import PrayTimes from '../PrayTimes';
+import { LanguageContext } from '../contexts/languageContext';
+import { FetchedDataContext } from '../contexts/FetchedDataContext';
+import { ThemeContext } from '../contexts/theme';
 
 afterEach(cleanup);
 

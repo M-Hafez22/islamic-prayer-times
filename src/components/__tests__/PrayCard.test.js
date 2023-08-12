@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import { FetchedDataProvider } from './contexts/FetchedDataContext';
-import { LanguageProvider } from './contexts/languageContext';
-import { ThemeProvider } from './contexts/theme';
-import PrayCard from './PrayCard';
+import { FetchedDataProvider } from '../contexts/FetchedDataContext';
+import { LanguageProvider } from '../contexts/languageContext';
+import { ThemeProvider } from '../contexts/theme';
+import PrayCard from '../PrayCard';
 
 describe('Renders the Footer', () => {
     beforeEach(() => {

@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useLocation } from './useLocation'
+import { useLocation } from '../useLocation'
 
 describe('Test useLocation Hook', () => {
     let mockGeolocation

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import { FetchedDataContext } from './contexts/FetchedDataContext';
-import { LanguageContext } from './contexts/languageContext';
-import HijriDate from './HijriDate';
+import { FetchedDataContext } from '../contexts/FetchedDataContext';
+import { LanguageContext } from '../contexts/languageContext';
+import HijriDate from '../HijriDate';
 
 afterEach(cleanup);
 

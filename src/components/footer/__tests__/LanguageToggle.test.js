@@ -1,9 +1,9 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import { LanguageProvider } from '../contexts/languageContext';
-import LanguageToggle from './LanguageToggle';
-import { ThemeProvider } from '../contexts/theme';
+import { LanguageProvider } from '../../contexts/languageContext';
+import LanguageToggle from '../LanguageToggle';
+import { ThemeProvider } from '../../contexts/theme';
 import React from 'react';
-import { FetchedDataProvider } from '../contexts/FetchedDataContext';
+import { FetchedDataProvider } from '../../contexts/FetchedDataContext';
 
 describe('Change App Language', () => {
 

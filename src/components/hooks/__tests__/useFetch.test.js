@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useFetch } from './useFetch';
+import { useFetch } from '../useFetch';
 
 describe('useFetch', () => {
     it('fetches data from an API and returns the data and loading state', async () => {
