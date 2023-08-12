@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import React, {useContext} from 'react';
 import Clock from './components/Clock'
 import HijriDate from './components/HijriDate'
 import PrayTimes from './components/PrayTimes'
