@@ -20,7 +20,7 @@ export default function Clock() {
   return (
     <div
       className='clock'
-      style={{ flexDirection: language === "ar" && " row-reverse" }}>
+      style={{ flexDirection: language === "ar" ? "row-reverse" : "row"}}>
 
       <h2>
         {to12Format(currentTime)}
