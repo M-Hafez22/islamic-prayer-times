@@ -50,7 +50,7 @@ function PrayTimes() {
     return (
         <div className={isDark ?  "prayTimeDark" :  "prayTimeLight"}>
             <ul
-              style={{flexDirection: language === "ar" && " row-reverse"}}>
+              style={{flexDirection: language === "ar" ? "row-reverse" : "row"}}>
               { loaded &&  prayerTimeList }
             </ul>
             <RemainTime text={text}  prayer={prayer} time={loaded && remaineTime}/>
