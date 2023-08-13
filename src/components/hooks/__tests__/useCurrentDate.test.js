@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from '@testing-library/react-hooks';
 import { useCurrentDate } from '../useCurrentDate';
 
 jest.useFakeTimers();
@@ -14,9 +14,11 @@ describe('Unit test for useCurrentDate', () => {
         const { result } = renderHook(() => useCurrentDate());
 
         const initialDate = result.current;
+        act(() => {
 
-        // Fast-forward 1 second
-        jest.advanceTimersByTime(1000);
+            // Fast-forward 1 second
+            jest.advanceTimersByTime(1000);
+        })
 
         expect(result.current).not.toEqual(initialDate);
     });
