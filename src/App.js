@@ -12,7 +12,7 @@ function App() {
   const [ {isDark} ] = useContext(ThemeContext);
 
   return (
-    <div  className={isDark  ? 'app dark' : 'app light'}>
+    <div  className={isDark  ? 'app dark' : 'app light'} data-testid={'app'}>
       <FetchedDataProvider>
         <LanguageProvider>
           <Clock />
