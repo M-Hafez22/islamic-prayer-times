@@ -48,7 +48,7 @@ function PrayTimes() {
     const [{isDark} ] = useContext(ThemeContext);
     
     return (
-        <div className={isDark ?  "prayTimeDark" :  "prayTimeLight"}>
+        <div className={isDark ?  "prayTimeDark" :  "prayTimeLight"} data-testid={'prayTime'}>
             <ul
               style={{flexDirection: language === "ar" ? "row-reverse" : "row"}}>
               { loaded &&  prayerTimeList }

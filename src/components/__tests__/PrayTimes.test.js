@@ -53,5 +53,29 @@ describe('PrayTimes', () => {
         expect(getByText('08:00')).toBeInTheDocument();
 
     });
-
+    
+    it('Renders with light theme', () => {
+        const { getByTestId } = render(
+            <LanguageContext.Provider value={["ar"]}>
+                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' } }]}>
+                    <ThemeContext.Provider value={[{ isDark: false }]}>
+                        <PrayTimes />
+                    </ThemeContext.Provider>
+                </FetchedDataContext.Provider>
+            </LanguageContext.Provider>
+        );
+        expect(getByTestId('prayTime').classList).toContain('prayTimeLight')
+    });
+    it('Renders with Dark theme', () => {
+        const { getByTestId } = render(
+            <LanguageContext.Provider value={["ar"]}>
+                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' } }]}>
+                    <ThemeContext.Provider value={[{ isDark: true }]}>
+                        <PrayTimes />
+                    </ThemeContext.Provider>
+                </FetchedDataContext.Provider>
+            </LanguageContext.Provider>
+        );
+        expect(getByTestId('prayTime').classList).toContain('prayTimeDark')
+    });
 });
