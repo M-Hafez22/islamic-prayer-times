@@ -10,6 +10,7 @@ export default function Footer() {
 
     return (
         <footer
+            data-testid={'footer'}
             className={isDark ? "footerDark" : "footerLight"}
             style={{ height: show ? '100%' : '4.5em' }}>
             <button onClick={() => setShow(!show)} className='setting-btn'>
