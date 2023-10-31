@@ -53,7 +53,7 @@ function PrayTimes() {
               style={{flexDirection: language === "ar" ? "row-reverse" : "row"}}>
               { loaded &&  prayerTimeList }
             </ul>
-            <RemainTime text={text}  prayer={prayer} time={loaded && remaineTime}/>
+            {loaded &&  <RemainTime text={text} prayer={prayer} time={remaineTime}/>}
         </div>
     )
 }
