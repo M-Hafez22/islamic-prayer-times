@@ -60,6 +60,8 @@ Islamic Prayer Times is a web app that uses **[AlAdhan.com](https://aladhan.com/
 To clone and run this application, you'll need Git and npm (which comes with Node.js) installed on your computer.
 From your command line:
 
+> It's recommended to use lts Node version
+
 1. Clone this repository
   `git clone https://github.com/M-Hafez22/islamic-prayer-times.git`
 2. Go into the repository
