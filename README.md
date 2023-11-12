@@ -2,7 +2,7 @@
 # [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/m-hafez22/islamic-prayer-times)
-![commet](https://img.shields.io/github/commits-since/m-hafez22/islamic-prayer-times/v1.1.1.svg?logo=github)
+![commet](https://img.shields.io/github/commits-since/m-hafez22/islamic-prayer-times/v1.1.4.svg?logo=github)
 
 [![Mozilla Add-on](https://img.shields.io/badge/-Mozilla_Add--on-20123A?style=for-the-badge&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/islamic-prayer-times/)
 [![Docker](https://img.shields.io/badge/-Docker_Image-2497EC?style=for-the-badge&logoColor=fff&logo=docker)](https://hub.docker.com/r/mohamedhafez/islamic_prayer_times)
@@ -98,7 +98,7 @@ From your command line:
 
 ### Build for Chrome
 
-> You can download the Chrome extension release from [Here](https://github.com/M-Hafez22/islamic-prayer-times/releases/download/v1.1.1/islamic-prayer-times-chrome-extention-v1.1.1.zip)
+> You can download the Chrome extension release from [Here](https://github.com/M-Hafez22/islamic-prayer-times/releases/download/v1.1.4/islamic-prayer-times-chrome-v1.1.4.zip)
 
 - Open [package.json](./package.json) and make sure that **homepage** set to **.** the current directory
 
