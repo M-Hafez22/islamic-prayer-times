@@ -19,7 +19,7 @@ Go to [Islamic Prayer Times](https://m-hafez22.github.io/islamic-prayer-times/)
 
 ## Table of Contents
 
-- [General info](#general-info)u
+- [General info](#general-info)
 - [Features](#features)
 - [Manual](#manual)
 - [Clone](#clone)
