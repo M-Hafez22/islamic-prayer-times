@@ -7,18 +7,19 @@ import { LanguageContext } from "../contexts/languageContext"
 
 describe("Renders Clock (Dark/Light) (English/Arabic)", () => {
     describe("Renders Clock in Dark Mode", () => {
-        beforeEach(() => {
-            render(
-                <ThemeContext.Provider value={[{ isDark: true }]}>
-                    <LanguageContext.Provider value={["en"]}>
-                        <Clock />
-                    </LanguageContext.Provider>
-                </ThemeContext.Provider>
-            )
-        })
         describe("Clock", () => {
+            beforeEach(() => {
+                render(
+                    <ThemeContext.Provider value={[{ isDark: true }]}>
+                        <LanguageContext.Provider value={["en"]}>
+                            <Clock />
+                        </LanguageContext.Provider>
+                    </ThemeContext.Provider>
+                )
+            })
             let date = new Date()
             it("renders Hour:Minute in 12 format", () => {
+
                 const currentTime = `${date.getHours()}:${date.getMinutes()}`
                 expect(screen.getByText(to12Format(currentTime))).toBeInTheDocument()
             })
@@ -36,13 +37,13 @@ describe("Renders Clock (Dark/Light) (English/Arabic)", () => {
         })
         describe("Enlish", () => {
             it("Render Clock in Enlish", () => {
-                render(
-                    <ThemeContext.Provider value={[{ isDark: true }]}>
-                        <LanguageContext.Provider value={["ar"]}>
-                            <Clock />
-                        </LanguageContext.Provider>
-                    </ThemeContext.Provider>
-                )
+            render(
+                <ThemeContext.Provider value={[{ isDark: true }]}>
+                    <LanguageContext.Provider value={["en"]}>
+                        <Clock />
+                    </LanguageContext.Provider>
+                </ThemeContext.Provider>
+            )
                 let date = new Date()
                 expect(
                     screen.getByText(date.getHours() < 12 ? "AM" : "PM")
@@ -67,16 +68,16 @@ describe("Renders Clock (Dark/Light) (English/Arabic)", () => {
     })
 
     describe("Renders Clock in Light Mode", () => {
-        beforeEach(() => {
-            render(
-                <ThemeContext.Provider value={[{ isDark: false }]}>
-                    <LanguageContext.Provider value={["en"]}>
-                        <Clock />
-                    </LanguageContext.Provider>
-                </ThemeContext.Provider>
-            )
-        })
         describe("Clock", () => {
+            beforeEach(() => {
+                render(
+                    <ThemeContext.Provider value={[{ isDark: false }]}>
+                        <LanguageContext.Provider value={["en"]}>
+                            <Clock />
+                        </LanguageContext.Provider>
+                    </ThemeContext.Provider>
+                )
+            })
             let date = new Date()
             it("renders Hour:Minute in 12 format", () => {
                 const currentTime = `${date.getHours()}:${date.getMinutes()}`
@@ -98,7 +99,7 @@ describe("Renders Clock (Dark/Light) (English/Arabic)", () => {
             it("Render Clock in Enlish", () => {
                 render(
                     <ThemeContext.Provider value={[{ isDark: true }]}>
-                        <LanguageContext.Provider value={["ar"]}>
+                        <LanguageContext.Provider value={["en"]}>
                             <Clock />
                         </LanguageContext.Provider>
                     </ThemeContext.Provider>
