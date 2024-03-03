@@ -1,129 +1,72 @@
 import { render, screen } from "@testing-library/react"
-import React from "react"
-import Clock from "../Clock"
-import { addLeadingZero, to12Format } from "../helper/formatTime"
-import { ThemeContext } from "../contexts/theme"
 import { LanguageContext } from "../contexts/languageContext"
+import Clock from "../Clock"
 
-describe("Renders Clock (Dark/Light) (English/Arabic)", () => {
-    describe("Renders Clock in Dark Mode", () => {
-        describe("Clock", () => {
-            beforeEach(() => {
-                render(
-                    <ThemeContext.Provider value={[{ isDark: true }]}>
-                        <LanguageContext.Provider value={["en"]}>
-                            <Clock />
-                        </LanguageContext.Provider>
-                    </ThemeContext.Provider>
-                )
-            })
-            let date = new Date()
-            it("renders Hour:Minute in 12 format", () => {
+describe("Clock", () => {
+  it("displays the current time in 12 hour format", () => {
+    jest.useFakeTimers()
+    jest.setSystemTime(new Date("2022-01-01T10:15:30"))
 
-                const currentTime = `${date.getHours()}:${date.getMinutes()}`
-                expect(screen.getByText(to12Format(currentTime))).toBeInTheDocument()
-            })
-            it("Renders Second", () => {
-                let date = new Date()
-                expect(
-                    screen.getByText(`:${addLeadingZero(date.getSeconds())}`)
-                ).toBeInTheDocument()
-            })
-            it("render AM or PM", () => {
-                expect(
-                    screen.getByText(date.getHours() < 12 ? "AM" : "PM")
-                ).toBeInTheDocument()
-            })
-        })
-        describe("Enlish", () => {
-            it("Render Clock in Enlish", () => {
-            render(
-                <ThemeContext.Provider value={[{ isDark: true }]}>
-                    <LanguageContext.Provider value={["en"]}>
-                        <Clock />
-                    </LanguageContext.Provider>
-                </ThemeContext.Provider>
-            )
-                let date = new Date()
-                expect(
-                    screen.getByText(date.getHours() < 12 ? "AM" : "PM")
-                ).toBeInTheDocument()
-            })
-        })
-        describe("Arabic", () => {
-            it("Render Clock in Arabic", () => {
-                render(
-                    <ThemeContext.Provider value={[{ isDark: true }]}>
-                        <LanguageContext.Provider value={["ar"]}>
-                            <Clock />
-                        </LanguageContext.Provider>
-                    </ThemeContext.Provider>
-                )
-                let date = new Date()
-                expect(
-                    screen.getByText(date.getHours() < 12 ? "صباحاً" : "مساءً")
-                ).toBeInTheDocument()
-            })
-        })
-    })
+    render(
+      <LanguageContext.Provider value={["en"]}>
+        <Clock />
+      </LanguageContext.Provider>
+    )
 
-    describe("Renders Clock in Light Mode", () => {
-        describe("Clock", () => {
-            beforeEach(() => {
-                render(
-                    <ThemeContext.Provider value={[{ isDark: false }]}>
-                        <LanguageContext.Provider value={["en"]}>
-                            <Clock />
-                        </LanguageContext.Provider>
-                    </ThemeContext.Provider>
-                )
-            })
-            let date = new Date()
-            it("renders Hour:Minute in 12 format", () => {
-                const currentTime = `${date.getHours()}:${date.getMinutes()}`
-                expect(screen.getByText(to12Format(currentTime))).toBeInTheDocument()
-            })
-            it("Renders Second", () => {
-                let date = new Date()
-                expect(
-                    screen.getByText(`:${addLeadingZero(date.getSeconds())}`)
-                ).toBeInTheDocument()
-            })
-            it("render AM or PM", () => {
-                expect(
-                    screen.getByText(date.getHours() < 12 ? "AM" : "PM")
-                ).toBeInTheDocument()
-            })
-        })
-        describe("Enlish", () => {
-            it("Render Clock in Enlish", () => {
-                render(
-                    <ThemeContext.Provider value={[{ isDark: true }]}>
-                        <LanguageContext.Provider value={["en"]}>
-                            <Clock />
-                        </LanguageContext.Provider>
-                    </ThemeContext.Provider>
-                )
-                let date = new Date()
-                expect(
-                    screen.getByText(date.getHours() < 12 ? "AM" : "PM")
-                ).toBeInTheDocument()
-            })
-        })
-        describe("Arabic", () => {
-            it("Render Clock in Arabic", () => {
-                render(
-                    <ThemeContext.Provider value={[{ isDark: true }]}>
-                        <LanguageContext.Provider value={["ar"]}>
-                            <Clock />
-                        </LanguageContext.Provider>
-                    </ThemeContext.Provider>
-                )
-                let date = new Date()
-                expect(
-                    screen.getByText(date.getHours() < 12 ? "صباحاً" : "مساءً")
-                ).toBeInTheDocument()
-            })
-        })
-    })
+    expect(screen.getByText("10:15")).toBeInTheDocument()
+    expect(screen.getByText("AM")).toBeInTheDocument()
+  })
+
+  it("displays seconds with leading zero", () => {
+    jest.useFakeTimers()
+    jest.setSystemTime(new Date("2022-01-01T10:15:05Z"))
+
+    render(
+      <LanguageContext.Provider value={["en"]}>
+        <Clock />
+      </LanguageContext.Provider>
+    )
+
+    expect(screen.getByText(":05")).toBeInTheDocument()
+  })
+
+  it("displays AM/PM in English", () => {
+    jest.useFakeTimers()
+
+    jest.setSystemTime(new Date("2022-01-01T05:15:05Z"))
+    render(
+      <LanguageContext.Provider value={["en"]}>
+        <Clock />
+      </LanguageContext.Provider>
+    )
+    expect(screen.getByText("AM")).toBeInTheDocument()
+
+    jest.setSystemTime(new Date("2022-01-01T15:15:05Z"))
+    render(
+      <LanguageContext.Provider value={["en"]}>
+        <Clock />
+      </LanguageContext.Provider>
+    )
+    expect(screen.getByText("PM")).toBeInTheDocument()
+  })
+
+  it("displays AM/PM in Arabic based on context", () => {
+    jest.useFakeTimers()
+
+    jest.setSystemTime(new Date("2022-01-01T05:15:05Z"))
+    render(
+      <LanguageContext.Provider value={["ar"]}>
+        <Clock />
+      </LanguageContext.Provider>
+    )
+    expect(screen.getByText("صباحاً")).toBeInTheDocument()
+
+    jest.setSystemTime(new Date("2022-01-01T15:15:05Z"))
+    render(
+      <LanguageContext.Provider value={["ar"]}>
+        <Clock />
+      </LanguageContext.Provider>
+    )
+    expect(screen.getByText("مساءً")).toBeInTheDocument()
+  })
 })
