@@ -5,7 +5,7 @@
  * @returns {string} the number with leading zero
  */
 // export const addLeadingZero = (number) => (number < 10 ? `0${number}` : number.toString());
-export const addLeadingZero = (number) => number.toString().padStart(2, '0');
+export const addLeadingZero = (number: string | number): string => number.toString().padStart(2, '0');
 
 
 /**
@@ -14,7 +14,7 @@ export const addLeadingZero = (number) => number.toString().padStart(2, '0');
  * @param {string} time hours:minutes 5:39
  * @returns {string} time 05:39
  */
-export const to12Format = (time) => {
+export const to12Format = (time: string): string => {
 
   let hour = parseInt(time.slice(0, time.indexOf(":")));
   let minute = time.slice(time.indexOf(":") + 1);
@@ -33,7 +33,7 @@ export const to12Format = (time) => {
 
 
 // Format time ( for nextPray )
-export const getTimeFormat = (num) => {
+export const getTimeFormat = (num: number) => {
   num = Math.ceil(Math.abs(num) / 1000);
   const h = Math.floor(num / 3600);
   num %= 3600;
