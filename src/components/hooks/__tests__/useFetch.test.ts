@@ -8,7 +8,7 @@ describe('useFetch', () => {
         const mockFetchPromise = Promise.resolve({
             json: () => mockJsonPromise,
         });
-        jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+        const mockFetch = jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
         const { result, waitForNextUpdate } = renderHook(() => useFetch('https://test.com'));
 
@@ -20,6 +20,6 @@ describe('useFetch', () => {
         expect(result.current[0]).toBe(true); // check loading state after fetch
         expect(result.current[1]).toBe('test data'); // check data after fetch
 
-        global.fetch.mockClear();
+        mockFetch.mockClear();
     });
 });

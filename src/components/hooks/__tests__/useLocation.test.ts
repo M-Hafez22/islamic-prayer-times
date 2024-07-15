@@ -2,14 +2,18 @@ import { act, renderHook } from '@testing-library/react-hooks'
 import { useLocation } from '../useLocation'
 
 describe('Test useLocation Hook', () => {
-    let mockGeolocation
+    let mockGeolocation: { getCurrentPosition: any; watchPosition?: jest.Mock<any, any, any> }
+
 
     beforeEach(() => {
         mockGeolocation = {
             getCurrentPosition: jest.fn(),
             watchPosition: jest.fn()
         }
-        global.navigator.geolocation = mockGeolocation
+        Object.defineProperty(global.navigator, 'geolocation', {
+            value: mockGeolocation,
+            configurable: true
+        })
     })
 
     it('returns initial location', () => {
@@ -20,7 +24,7 @@ describe('Test useLocation Hook', () => {
 
     it('updates location when geolocation is successful', () => {
         const { result } = renderHook(() => useLocation())
-        const [latitude, longitude] = result.current
+        // const [latitude, longitude] = result.current
 
         act(() => {
             const position = { coords: { latitude: "40.7128", longitude: "74.0060" } }
