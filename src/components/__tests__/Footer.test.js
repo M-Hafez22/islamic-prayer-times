@@ -41,7 +41,12 @@ describe('Footer', () => {
         const { getAllByTestId } = render(
 
             <LanguageContext.Provider value={["ar"]}>
-                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {TimeZone : "Africa/Cairo"} }]}>
+                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {
+                timezone: 'Africa/Cairo',
+                method: {
+                    name: "Egyptian General Authority of Survey"
+                }
+            } }]}>
                     <ThemeContext.Provider value={[{ isDark: false }]}>
                         <Footer />
                     </ThemeContext.Provider>
@@ -54,7 +59,12 @@ describe('Footer', () => {
         const { getAllByTestId } = render(
 
             <LanguageContext.Provider value={["ar"]}>
-                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {TimeZone : "Africa/Cairo"} }]}>
+                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {
+                timezone: 'Africa/Cairo',
+                method: {
+                    name: "Egyptian General Authority of Survey"
+                }
+            } }]}>
                     <ThemeContext.Provider value={[{ isDark: true }]}>
                         <Footer />
                     </ThemeContext.Provider>

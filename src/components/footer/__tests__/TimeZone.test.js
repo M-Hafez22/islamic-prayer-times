@@ -9,7 +9,10 @@ describe('Show Time Zone', () => {
     it('renders the timezone when data is loaded', () => {
         const mockData = {
             meta: {
-                timezone: 'Africa/Cairo'
+                timezone: 'Africa/Cairo',
+                method: {
+                    name: "Egyptian General Authority of Survey"
+                }
             }
         };
 
@@ -19,6 +22,6 @@ describe('Show Time Zone', () => {
             </FetchedDataContext.Provider>
         );
 
-        expect(getByText('Africa/Cairo')).toBeInTheDocument();
+        expect(getByText('Africa/Cairo - Egyptian General Authority of Survey')).toBeInTheDocument();
     });
 });
