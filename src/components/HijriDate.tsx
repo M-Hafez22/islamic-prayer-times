@@ -3,7 +3,13 @@ import { FetchedDataContext } from "./contexts/FetchedDataContext"
 import { LanguageContext } from "./contexts/languageContext"
 
 export default function HijriDate() {
-  const [language] = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
+
+  if (!context) {
+    throw new Error('SomeComponent must be used within a LanguageProvider');
+  }
+
+  const { language } = context;
   const fetchedDataContext = useContext(FetchedDataContext)
 
   if (!fetchedDataContext) {

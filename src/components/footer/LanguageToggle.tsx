@@ -4,7 +4,13 @@ import RadioButton from './RadioButton'
 
 export default function LanguageToggle() {
 
-  const [language, setLanguage] = useContext(LanguageContext);
+  const context = useContext(LanguageContext);
+
+  if (!context) {
+    throw new Error('SomeComponent must be used within a LanguageProvider');
+  }
+
+  const { language, setLanguage } = context;
 
   const toggle = (e) => {
     setLanguage(e.currentTarget.value)

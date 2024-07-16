@@ -5,7 +5,13 @@ import { to12Format, addLeadingZero } from './helper/formatTime'
 
 export default function Clock() {
 
-  const [language] = useContext(LanguageContext);
+  const context = useContext(LanguageContext);
+
+  if (!context) {
+    throw new Error('SomeComponent must be used within a LanguageProvider');
+  }
+
+  const { language } = context;
 
   // Get the current time
   const date = useCurrentDate();
