@@ -3,7 +3,7 @@ import PrayCard from './PrayCard'
 import RemainTime from './RemainTime'
 import {FetchedDataContext} from './contexts/FetchedDataContext'
 import {LanguageContext} from './contexts/languageContext'
-import { ThemeContext } from './contexts/theme'
+import { ThemeContext } from './contexts/ThemeContext'
 import useNextPrayer from './hooks/useNextPray'
 
 function PrayTimes() {
@@ -45,7 +45,13 @@ function PrayTimes() {
     let prayer = prayerNames[nextPray];
 
     // Toggle Themes (Dark, Light)
-    const [{isDark} ] = useContext(ThemeContext);
+    const themeContext = useContext(ThemeContext);
+
+    if (!themeContext) {
+      throw new Error('useContext must be used within a ThemeProvider');
+    }
+  
+    const { isDark } = themeContext;
     
     return (
         <div className={isDark ?  "prayTimeDark" :  "prayTimeLight"} data-testid={'prayTime'}>

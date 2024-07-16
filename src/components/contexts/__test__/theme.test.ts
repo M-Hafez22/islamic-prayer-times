@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import { ThemeProvider, ThemeContext } from '../theme';
+import { ThemeProvider, ThemeContext } from '../ThemeContext';
 
 // Mocking localStorage
 const mockSetItem = jest.fn();

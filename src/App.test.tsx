@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import App from './App';
-import { ThemeContext } from './components/contexts/theme';
+import { ThemeContext } from './components/contexts/ThemeContext';
 import { LanguageContext } from './components/contexts/languageContext';
 import { FetchedDataContext } from './components/contexts/FetchedDataContext';
 
