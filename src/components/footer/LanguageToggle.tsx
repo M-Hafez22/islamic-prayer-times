@@ -12,7 +12,7 @@ export default function LanguageToggle() {
 
   const { language, setLanguage } = context;
 
-  const toggle = (e) => {
+  const toggle = (e: { currentTarget: { value: string; }; }) => {
     setLanguage(e.currentTarget.value)
     localStorage.setItem("language", (e.currentTarget.value))
   }
@@ -24,13 +24,13 @@ export default function LanguageToggle() {
           label="english"
           value={'en'}
           checked={language === "en"}
-          onChange={(e) => toggle(e)}
+          onChange={(e: { currentTarget: { value: string; }; }) => toggle(e)}
         />
         <RadioButton
           label="عربى"
           value={'ar'}
           checked={language === "ar"}
-          onChange={(e) => toggle(e)}
+          onChange={(e: { currentTarget: { value: string; }; }) => toggle(e)}
         />
       </div>
 
