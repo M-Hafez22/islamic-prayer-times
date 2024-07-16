@@ -18,7 +18,7 @@ export default function Clock() {
   const currentTime = `${date.getHours()}:${date.getMinutes()}`;
 
   // Determine night or day
-  const dayOrNight = {
+  const dayOrNight: { [key: string]: string } = {
     en: date.getHours() < 12 ? "AM" : "PM",
     ar: date.getHours() < 12 ? "صباحاً" : "مساءً"
   };
