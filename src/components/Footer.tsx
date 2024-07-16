@@ -1,9 +1,15 @@
 import React, { useContext, useState } from 'react'
 import Settings from './footer/Settings';
-import { ThemeContext } from './contexts/theme'
+import { ThemeContext } from './contexts/ThemeContext'
 
 export default function Footer() {
-    const [{ isDark }] = useContext(ThemeContext);
+    const themeContext = useContext(ThemeContext);
+
+    if (!themeContext) {
+      throw new Error('useContext must be used within a ThemeProvider');
+    }
+  
+    const { isDark } = themeContext;
 
     // A state for Showing and Hiding Setting section
     const [show, setShow] = useState(false)
