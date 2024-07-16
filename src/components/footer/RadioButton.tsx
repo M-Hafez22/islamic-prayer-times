@@ -3,7 +3,7 @@ import { ThemeContext } from '../contexts/ThemeContext'
 interface PropsType {
     label: string,
     value: string,
-    onChange: () => void,
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
     checked: boolean
 }
 function RadioButton({ label, value, onChange, checked }: PropsType) {
