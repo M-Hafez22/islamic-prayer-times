@@ -1,21 +1,27 @@
-import React, { createContext } from "react";
-import { useFetch } from '../hooks/useFetch'
+import React, { createContext, ReactNode } from "react";
+import { useFetch } from '../hooks/useFetch';
 import { useLocation } from '../hooks/useLocation';
+import { FetchedData } from '../../types';
 
-export const FetchedDataContext = createContext();
+interface FetchedDataContextType {
+  loaded: boolean;
+  data: FetchedData | null;
+}
 
-export function FetchedDataProvider(props) {
+export const FetchedDataContext = createContext<FetchedDataContextType | undefined>(undefined);
 
-    // Get Local coords
-    const [latitude, longitude] = useLocation();
-    // Get time
-    const date = Math.floor(Date.now() / 1000);
-    // Get Data
-    const [loaded, data] = useFetch(`https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}`);
-console.log(data);
-    return (
-        <FetchedDataContext.Provider value={[loaded, data]}>
-            {props.children}
-        </FetchedDataContext.Provider>
-    )
+interface FetchedDataProviderProps {
+  children: ReactNode;
+}
+
+export function FetchedDataProvider({ children }: FetchedDataProviderProps) {
+  const [latitude, longitude] = useLocation();
+  const date = Math.floor(Date.now() / 1000);
+  const [loaded, data] = useFetch<FetchedData>(`https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}`);
+
+  return (
+    <FetchedDataContext.Provider value={{ loaded, data }}>
+      {children}
+    </FetchedDataContext.Provider>
+  );
 }

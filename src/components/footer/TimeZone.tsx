@@ -1,10 +1,20 @@
-import React, { useContext } from 'react'
-import { FetchedDataContext } from '../contexts/FetchedDataContext'
+import React, { useContext } from "react"
+import { FetchedDataContext } from "../contexts/FetchedDataContext"
 
 function TimeZone() {
-  const [loaded, data] = useContext(FetchedDataContext);
+  const fetchedDataContext = useContext(FetchedDataContext)
 
-  return <h4>{loaded && data.meta.timezone} - {loaded && data.meta.method.name}</h4>
+  if (!fetchedDataContext) {
+    throw new Error("useContext must be used within a FetchedDataProvider")
+  }
+
+  const { loaded, data } = fetchedDataContext
+
+  return (
+    <h4>
+      {loaded && data?.meta.timezone} - {loaded && data?.meta.method.name}
+    </h4>
+  )
 }
 
-export default TimeZone;
+export default TimeZone
