@@ -26,7 +26,7 @@ export default function useNextPrayer(timesArr: string[]) {
     const millisecondsInDay = 86400000;
     let remaineTime = remainingPrayers.length > 0
       ? ( Math.max(...remainingPrayers))
-      : (millisecondsInDay - (date.getTime() - prayDate[0].getTime()))
+      : (millisecondsInDay - (date.getTime() - prayDate[0]?.getTime()))
 
     // Get next Prayer index
     const nextPrayer = timeLeft.indexOf(remaineTime) !== -1
