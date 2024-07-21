@@ -17,10 +17,10 @@ interface FetchedDataProviderProps {
 export function FetchedDataProvider({ children }: FetchedDataProviderProps) {
   const [latitude, longitude] = useLocation();
   const date = Math.floor(Date.now() / 1000);
-  const [loaded, data] = useFetch<FetchedData>(`https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}`);
+  const [loaded, data] = useFetch(`https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}`);
 
   return (
-    <FetchedDataContext.Provider value={{ loaded, data }}>
+    <FetchedDataContext.Provider value={{ loaded: loaded ?? false, data }}>
       {children}
     </FetchedDataContext.Provider>
   );
