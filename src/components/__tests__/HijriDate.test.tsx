@@ -4,30 +4,55 @@ import '@testing-library/jest-dom';
 import HijriDate from '../HijriDate';
 import { LanguageContext } from '../contexts/languageContext';
 import { FetchedDataContext } from '../contexts/FetchedDataContext';
+import {FetchedData, Meta, Timings} from '../../types'
 
 describe('HijriDate', () => {
-  const mockFetchedData = {
+  const mockFetchedData: {loaded: boolean, data: FetchedData} = {
     loaded: true,
     data: {
       date: {
         gregorian: {
           weekday: {
             en: 'Monday'
+          },
+          date: '',
+          format: '',
+          day: '',
+          month: {
+            number: 0,
+            en: ''
+          },
+          year: '',
+          designation: {
+            abbreviated: '',
+            expanded: ''
           }
         },
         hijri: {
           day: '18',
           month: {
             en: 'Rabi\' al-awwal',
-            ar: 'ربيع الأول'
+            ar: 'ربيع الأول',
+            number: 0
           },
           year: '1445',
           weekday: {
             en: 'Al-Ithnayn',
             ar: 'الإثنين'
-          }
-        }
-      }
+          },
+          date: '',
+          format: '',
+          designation: {
+            abbreviated: '',
+            expanded: ''
+          },
+          holidays: []
+        },
+        readable: '',
+        timestamp: ''
+      },
+      timings: {} as Timings,
+      meta: {} as Meta
     }
   };
 
