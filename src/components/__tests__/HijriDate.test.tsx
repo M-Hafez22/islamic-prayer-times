@@ -1,53 +1,111 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { FetchedDataContext } from '../contexts/FetchedDataContext';
-import { LanguageContext } from '../contexts/languageContext';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import HijriDate from '../HijriDate';
+import { LanguageContext } from '../contexts/languageContext';
+import { FetchedDataContext } from '../contexts/FetchedDataContext';
 
-afterEach(cleanup);
-
-const mockData = {
-    date: {
+describe('HijriDate', () => {
+  const mockFetchedData = {
+    loaded: true,
+    data: {
+      date: {
         gregorian: {
-            weekday: {
-                en: 'Monday',
-            },
+          weekday: {
+            en: 'Monday'
+          }
         },
         hijri: {
-            day: '1',
-            month: {
-                en: 'Muharram',
-                ar: 'محرم',
-            },
-            year: '1443',
-            weekday: {
-                ar: 'الاثنين',
-            },
-        },
-    },
-};
-describe('Renders Hijri Date', () => {
-    it('Renders Hijri date in English correctly', () => {
-        const { getByText } = render(
-            <FetchedDataContext.Provider value={[true, mockData]}>
-                <LanguageContext.Provider value={['en']}>
-                    <HijriDate />
-                </LanguageContext.Provider>
-            </FetchedDataContext.Provider>
-        );
+          day: '18',
+          month: {
+            en: 'Rabi\' al-awwal',
+            ar: 'ربيع الأول'
+          },
+          year: '1445',
+          weekday: {
+            en: 'Al-Ithnayn',
+            ar: 'الإثنين'
+          }
+        }
+      }
+    }
+  };
 
-        expect(getByText('Monday 1 Muharram 1443')).toBeInTheDocument();
-    });
+  const mockLanguageContextEn = {
+    language: 'en',
+    setLanguage: jest.fn()
+  };
 
-    it('Renders Hijri date in Arabic correctly', () => {
-        const { getByText } = render(
-            <FetchedDataContext.Provider value={[true, mockData]}>
-                <LanguageContext.Provider value={['ar']}>
-                    <HijriDate />
-                </LanguageContext.Provider>
-            </FetchedDataContext.Provider>
-        );
+  const mockLanguageContextAr = {
+    language: 'ar',
+    setLanguage: jest.fn()
+  };
 
-        expect(getByText('الاثنين 1 محرم 1443')).toBeInTheDocument();
-    });
+  it('renders correctly with English language context', () => {
+    render(
+      <LanguageContext.Provider value={mockLanguageContextEn}>
+        <FetchedDataContext.Provider value={mockFetchedData}>
+          <HijriDate />
+        </FetchedDataContext.Provider>
+      </LanguageContext.Provider>
+    );
+
+    expect(screen.getByText('Monday 18 Rabi\' al-awwal 1445')).toBeInTheDocument();
+  });
+
+  it('renders correctly with Arabic language context', () => {
+    render(
+      <LanguageContext.Provider value={mockLanguageContextAr}>
+        <FetchedDataContext.Provider value={mockFetchedData}>
+          <HijriDate />
+        </FetchedDataContext.Provider>
+      </LanguageContext.Provider>
+    );
+
+    expect(screen.getByText('الإثنين 18 ربيع الأول 1445')).toBeInTheDocument();
+  });
+
+  it('throws error when LanguageContext is missing', () => {
+    const consoleError = console.error;
+    console.error = jest.fn();
+
+    expect(() => render(
+      <FetchedDataContext.Provider value={mockFetchedData}>
+        <HijriDate />
+      </FetchedDataContext.Provider>
+    )).toThrow('SomeComponent must be used within a LanguageProvider');
+
+    console.error = consoleError;
+  });
+
+  it('throws error when FetchedDataContext is missing', () => {
+    const consoleError = console.error;
+    console.error = jest.fn();
+
+    expect(() => render(
+      <LanguageContext.Provider value={mockLanguageContextEn}>
+        <HijriDate />
+      </LanguageContext.Provider>
+    )).toThrow('useContext must be used within a FetchedDataProvider');
+
+    console.error = consoleError;
+  });
+
+  it('renders nothing when data is not loaded', () => {
+    const mockFetchedDataNotLoaded = {
+      loaded: false,
+      data: null
+    };
+
+    render(
+      <LanguageContext.Provider value={mockLanguageContextEn}>
+        <FetchedDataContext.Provider value={mockFetchedDataNotLoaded}>
+          <HijriDate />
+        </FetchedDataContext.Provider>
+      </LanguageContext.Provider>
+    );
+
+    expect(screen.queryByText('Monday 18 Rabi\' al-awwal 1445')).not.toBeInTheDocument();
+    expect(screen.queryByText('الإثنين 18 ربيع الأول 1445')).not.toBeInTheDocument();
+  });
 });

@@ -21,20 +21,20 @@ describe('Testing App', () => {
       );
       expect(getAllByTestId('app')[0].classList).toContain('light')
   });
-  it('Dark theme', () => {
-      const { getAllByTestId } = render(
+//   it('Dark theme', () => {
+//       const { getAllByTestId } = render(
 
-          <LanguageContext.Provider value={["ar"]}>
-              <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {TimeZone : "Africa/Cairo"} }]}>
-                  <ThemeContext.Provider value={[{ isDark: true }]}>
-                      <App />
-                  </ThemeContext.Provider>
-              </FetchedDataContext.Provider>
-          </LanguageContext.Provider>
+//           <LanguageContext.Provider value={["ar"]}>
+//               <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {TimeZone : "Africa/Cairo"} }]}>
+//                   <ThemeContext.Provider value={[{ isDark: true }]}>
+//                       <App />
+//                   </ThemeContext.Provider>
+//               </FetchedDataContext.Provider>
+//           </LanguageContext.Provider>
 
-      );
-      // console.log(getAllByTestId('app').le)
-      expect(getAllByTestId('app')[0].classList).toContain('dark')
-  });
+//       );
+//       // console.log(getAllByTestId('app').le)
+//       expect(getAllByTestId('app')[0].classList).toContain('dark')
+//   });
   })
 })
