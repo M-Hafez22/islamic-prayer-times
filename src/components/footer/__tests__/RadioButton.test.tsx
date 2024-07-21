@@ -1,44 +1,72 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
 import RadioButton from '../RadioButton';
-import { ThemeContext } from '../../contexts/theme';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { render, screen, fireEvent } from '@testing-library/react';
 
-describe('Renders Radio Button', () => {
-    const mockOnChange = jest.fn();
+describe('RadioButton', () => {
+  const renderWithTheme = (isDark: boolean, props: any) => {
+    return render(
+      <ThemeContext.Provider value={{ isDark, toggleTheme: () => {} }}>
+        <RadioButton {...props} />
+      </ThemeContext.Provider>
+    );
+  };
 
-    it('renders Radio Button correctly with light theme', () => {
-        const { getByTestId } = render(
-            <ThemeContext.Provider value={[{ isDark: false }]}>
-                <RadioButton label="test" value="testValue" onChange={mockOnChange} checked={false} />
-            </ThemeContext.Provider>
-        );
-
-        const radioButton = getByTestId('test');
-        expect(radioButton).toBeInTheDocument();
-        expect(radioButton).toHaveClass('light');
+  it('renders with light theme by default', () => {
+    renderWithTheme(false, {
+      label: 'TestRadio',
+      value: 'testValue',
+      onChange: jest.fn(),
+      checked: false,
     });
 
-    it('renders Radio Button correctly with dark theme', () => {
-        const { getByTestId } = render(
-            <ThemeContext.Provider value={[{ isDark: true }]}>
-                <RadioButton label="test" value="testValue" onChange={mockOnChange} checked={false} />
-            </ThemeContext.Provider>
-        );
+    const radioButton = screen.getByTestId('TestRadio');
+    expect(radioButton).toBeInTheDocument();
+    expect(radioButton).toHaveClass('light');
+  });
 
-        const radioButton = getByTestId('test');
-        expect(radioButton).toBeInTheDocument();
-        expect(radioButton).toHaveClass('dark');
+  it('renders with dark theme when isDark is true', () => {
+    renderWithTheme(true, {
+      label: 'TestRadio',
+      value: 'testValue',
+      onChange: jest.fn(),
+      checked: false,
     });
 
-    it('calls onChange when clicked', () => {
-        const { getByTestId } = render(
-            <ThemeContext.Provider value={[{ isDark: false }]}>
-                <RadioButton label="test" value="testValue" onChange={mockOnChange} checked={false} />
-            </ThemeContext.Provider>
-        );
+    const radioButton = screen.getByTestId('TestRadio');
+    expect(radioButton).toBeInTheDocument();
+    expect(radioButton).toHaveClass('dark');
+  });
 
-        const radioButton = getByTestId('test');
-        fireEvent.click(radioButton);
-        expect(mockOnChange).toHaveBeenCalled();
+  it('triggers onChange event when clicked', () => {
+    const handleChange = jest.fn();
+
+    renderWithTheme(false, {
+      label: 'TestRadio',
+      value: 'testValue',
+      onChange: handleChange,
+      checked: false,
     });
+
+    const radioButton = screen.getByTestId('TestRadio');
+    fireEvent.click(radioButton);
+
+    expect(handleChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('throws an error if used outside ThemeProvider', () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {}); // Suppress error output
+
+    expect(() =>
+      render(
+        <RadioButton
+          label="TestRadio"
+          value="testValue"
+          onChange={jest.fn()}
+          checked={false}
+        />
+      )
+    ).toThrow('useContext must be used within a ThemeProvider');
+
+    (console.error as jest.Mock).mockRestore(); // Restore console.error
+  });
 });
