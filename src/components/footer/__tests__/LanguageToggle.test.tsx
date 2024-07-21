@@ -1,7 +1,7 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import { LanguageProvider } from '../../contexts/languageContext';
 import LanguageToggle from '../LanguageToggle';
-import { ThemeProvider } from '../../contexts/theme';
+import { ThemeProvider } from '../../contexts/ThemeContext';
 import React from 'react';
 import { FetchedDataProvider } from '../../contexts/FetchedDataContext';
 
