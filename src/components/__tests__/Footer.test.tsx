@@ -58,9 +58,12 @@ describe('Footer', () => {
     
     it('Renders with light theme', () => {
         const { getByTestId } = render(
-            <LanguageContext.Provider value={["ar"]}>
-                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: { timezone: 'Africa/Cairo', method: { name: "Egyptian General Authority of Survey" } } }]}>
-                    <ThemeContext.Provider value={{ isDark: false }}>
+            <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
+                <FetchedDataContext.Provider value={{
+                    loaded: true,
+                    data: { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: { timezone: 'Africa/Cairo', method: { name: "Egyptian General Authority of Survey" } } }
+                }}>
+                    <ThemeContext.Provider value={{ isDark: false, toggleTheme: () => {} }}>
                         <Footer />
                     </ThemeContext.Provider>
                 </FetchedDataContext.Provider>
@@ -71,9 +74,12 @@ describe('Footer', () => {
     
     it('Renders with Dark theme', () => {
         const { getByTestId } = render(
-            <LanguageContext.Provider value={["ar"]}>
-                <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: { timezone: 'Africa/Cairo', method: { name: "Egyptian General Authority of Survey" } } }]}>
-                    <ThemeContext.Provider value={{ isDark: true }}>
+            <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
+                <FetchedDataContext.Provider value={{
+                    loaded: true,
+                    data: { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: { timezone: 'Africa/Cairo', method: { name: "Egyptian General Authority of Survey" } } }
+                }}>
+                    <ThemeContext.Provider value={{ isDark: true, toggleTheme: () => {} }}>
                         <Footer />
                     </ThemeContext.Provider>
                 </FetchedDataContext.Provider>
