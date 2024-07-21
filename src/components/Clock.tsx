@@ -8,7 +8,7 @@ export default function Clock() {
   const context = useContext(LanguageContext);
 
   if (!context) {
-    throw new Error('SomeComponent must be used within a LanguageProvider');
+    throw new Error('Clock must be used within a LanguageProvider');
   }
 
   const { language } = context;
