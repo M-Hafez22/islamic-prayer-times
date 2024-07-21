@@ -55,8 +55,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/index.js",
-      "!src/serviceWorker.js"
+      "!src/types.ts",
+      "!src/index.ts",
+      "!src/serviceWorker.ts"
     ],
     "coverageThreshold": {
       "global": {
