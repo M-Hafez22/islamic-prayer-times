@@ -10,7 +10,7 @@ import {getTimeFormat} from '../helper/formatTime'
  */
 
 
-export default function useNextPrayer(timesArr: string[]) {
+export default function useNextPrayer(timesArr: string[]): [string, number] {
     // Get current time
     const date = useCurrentDate();
     // Get the date of the prayer
