@@ -1,25 +1,42 @@
-import { act, renderHook } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react-hooks';
 import { useCurrentDate } from '../useCurrentDate';
 
 jest.useFakeTimers();
 
-describe('Unit test for useCurrentDate', () => {
-    it('should return the current date', () => {
-        const { result } = renderHook(() => useCurrentDate());
+describe('useCurrentDate', () => {
+  it('returns the initial date value', () => {
+    const { result } = renderHook(() => useCurrentDate());
+    const initialDate = new Date(result.current);
 
-        expect(result.current).toBeInstanceOf(Date);
+    expect(result.current).toEqual(initialDate);
+  });
+
+  it('updates the date every second', () => {
+    const { result } = renderHook(() => useCurrentDate());
+
+    const initialDate = new Date(result.current);
+    
+    act(() => {
+      jest.advanceTimersByTime(1000);
     });
 
-    it('should update the date every second', () => {
-        const { result } = renderHook(() => useCurrentDate());
+    const updatedDate = new Date(result.current);
 
-        const initialDate = result.current;
-        act(() => {
+    expect(updatedDate.getTime()).toBeGreaterThan(initialDate.getTime());
+  });
 
-            // Fast-forward 1 second
-            jest.advanceTimersByTime(1000);
-        })
+  it('updates the date correctly after multiple intervals', () => {
+    const { result } = renderHook(() => useCurrentDate());
 
-        expect(result.current).not.toEqual(initialDate);
+    const initialDate = new Date(result.current);
+    
+    act(() => {
+      jest.advanceTimersByTime(3000); // 3 seconds
     });
+
+    const updatedDate = new Date(result.current);
+
+    expect(updatedDate.getTime()).toBeGreaterThan(initialDate.getTime() + 2000);
+  });
+
 });
