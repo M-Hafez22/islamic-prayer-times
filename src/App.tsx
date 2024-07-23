@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-function MainContent() {
+export function MainContent() {
   const themeContext = useContext(ThemeContext);
 
   if (!themeContext) {

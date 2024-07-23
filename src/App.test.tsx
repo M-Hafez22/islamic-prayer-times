@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import App from './App';
-import { ThemeContext } from './components/contexts/ThemeContext';
+import App, { MainContent } from './App';
+import { ThemeContext, ThemeProvider } from './components/contexts/ThemeContext';
 import { LanguageContext } from './components/contexts/languageContext';
 import { FetchedDataContext } from './components/contexts/FetchedDataContext';
 import { FetchedData, Meta, Timings } from './types';
 
 describe('Testing App', () => {
-  const mockFetchedData: {loaded: boolean, data: FetchedData} = {
+  const mockFetchedData: { loaded: boolean, data: FetchedData } = {
     loaded: true,
     data: {
       date: {
@@ -55,34 +55,25 @@ describe('Testing App', () => {
       meta: {} as Meta
     }
   };
+
   describe("Renders App in", () => {
     it('light theme', () => {
       const { getAllByTestId } = render(
-
-          <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
-              <FetchedDataContext.Provider value={mockFetchedData}>
-                  <ThemeContext.Provider value={{ isDark: false, toggleTheme: () => {} }}>
-                      <App />
-                  </ThemeContext.Provider>
-              </FetchedDataContext.Provider>
-          </LanguageContext.Provider>
+        <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
+          <FetchedDataContext.Provider value={mockFetchedData}>
+            <ThemeContext.Provider value={{ isDark: false, toggleTheme: () => {} }}>
+              <App />
+            </ThemeContext.Provider>
+          </FetchedDataContext.Provider>
+        </LanguageContext.Provider>
       );
-      expect(getAllByTestId('app')[0].classList).toContain('light')
+      expect(getAllByTestId('app')[0].classList).toContain('light');
+    });
   });
-  // it('Dark theme', () => {
-  //     const { getAllByTestId } = render(
 
-  //         <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
-  //             <FetchedDataContext.Provider value={mockFetchedData}>
-  //                 <ThemeContext.Provider value={{ isDark: false, toggleTheme: () => {} }}>
-  //                     <App />
-  //                 </ThemeContext.Provider>
-  //             </FetchedDataContext.Provider>
-  //         </LanguageContext.Provider>
-
-  //     );
-  //     // console.log(getAllByTestId('app').le)
-  //     expect(getAllByTestId('app')[0].classList).toContain('dark')
-  // });
-  })
-})
+  describe("MainContent Component", () => {
+    it('throws error when ThemeContext is not provided', () => {
+      expect(() => render(<MainContent />)).toThrow('useContext must be used within a ThemeProvider');
+    });
+  });
+});
