@@ -32,6 +32,8 @@ describe('Change App Language', () => {
         fireEvent.click(screen.getByTestId('english'));
         expect(localStorage.getItem('language')).toBe('en');
     });
+
+    it('throws an error when LanguageContext is not provided', () => {
+        expect(() => render(<LanguageToggle />)).toThrow('SomeComponent must be used within a LanguageProvider');
+    });
 });
-
-
