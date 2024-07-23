@@ -4,16 +4,64 @@ import App from './App';
 import { ThemeContext } from './components/contexts/ThemeContext';
 import { LanguageContext } from './components/contexts/languageContext';
 import { FetchedDataContext } from './components/contexts/FetchedDataContext';
+import { FetchedData, Meta, Timings } from './types';
 
 describe('Testing App', () => {
-
+  const mockFetchedData: {loaded: boolean, data: FetchedData} = {
+    loaded: true,
+    data: {
+      date: {
+        gregorian: {
+          weekday: {
+            en: 'Monday'
+          },
+          date: '',
+          format: '',
+          day: '',
+          month: {
+            number: 0,
+            en: ''
+          },
+          year: '',
+          designation: {
+            abbreviated: '',
+            expanded: ''
+          }
+        },
+        hijri: {
+          day: '18',
+          month: {
+            en: 'Rabi\' al-awwal',
+            ar: 'ربيع الأول',
+            number: 0
+          },
+          year: '1445',
+          weekday: {
+            en: 'Al-Ithnayn',
+            ar: 'الإثنين'
+          },
+          date: '',
+          format: '',
+          designation: {
+            abbreviated: '',
+            expanded: ''
+          },
+          holidays: []
+        },
+        readable: '',
+        timestamp: ''
+      },
+      timings: {} as Timings,
+      meta: {} as Meta
+    }
+  };
   describe("Renders App in", () => {
     it('light theme', () => {
       const { getAllByTestId } = render(
 
-          <LanguageContext.Provider value={["ar"]}>
-              <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {TimeZone : "Africa/Cairo"} }]}>
-                  <ThemeContext.Provider value={[{ isDark: false }]}>
+          <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
+              <FetchedDataContext.Provider value={mockFetchedData}>
+                  <ThemeContext.Provider value={{ isDark: false, toggleTheme: () => {} }}>
                       <App />
                   </ThemeContext.Provider>
               </FetchedDataContext.Provider>
@@ -21,20 +69,20 @@ describe('Testing App', () => {
       );
       expect(getAllByTestId('app')[0].classList).toContain('light')
   });
-//   it('Dark theme', () => {
-//       const { getAllByTestId } = render(
+  // it('Dark theme', () => {
+  //     const { getAllByTestId } = render(
 
-//           <LanguageContext.Provider value={["ar"]}>
-//               <FetchedDataContext.Provider value={[true, { timings: { Fajr: '05:00', Dhuhr: '12:00', Asr: '15:00', Maghrib: '18:00', Isha: '20:00' }, meta: {TimeZone : "Africa/Cairo"} }]}>
-//                   <ThemeContext.Provider value={[{ isDark: true }]}>
-//                       <App />
-//                   </ThemeContext.Provider>
-//               </FetchedDataContext.Provider>
-//           </LanguageContext.Provider>
+  //         <LanguageContext.Provider value={{ language: "ar", setLanguage: () => {} }}>
+  //             <FetchedDataContext.Provider value={mockFetchedData}>
+  //                 <ThemeContext.Provider value={{ isDark: false, toggleTheme: () => {} }}>
+  //                     <App />
+  //                 </ThemeContext.Provider>
+  //             </FetchedDataContext.Provider>
+  //         </LanguageContext.Provider>
 
-//       );
-//       // console.log(getAllByTestId('app').le)
-//       expect(getAllByTestId('app')[0].classList).toContain('dark')
-//   });
+  //     );
+  //     // console.log(getAllByTestId('app').le)
+  //     expect(getAllByTestId('app')[0].classList).toContain('dark')
+  // });
   })
 })
